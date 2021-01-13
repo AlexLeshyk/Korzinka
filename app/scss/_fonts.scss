@@ -1,0 +1,18 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-bold", "../fonts/RobotoBold/RobotoBold", bold);
+
+
+@include font-face("lato-black", "../fonts/Lato-Black/Lato-Black");
+@include font-face("lato-bold", "../fonts/Lato-Bold/Lato-Bold");
+
+
+@include font-face("opensans", "../fonts/OpenSans-Regular/OpenSans-Regular");
+@include font-face("opensans-bold", "../fonts/OpenSans-Bold/OpenSans-Bold");
+@include font-face("opensans-semibold", "../fonts/OpenSans-Semibold/OpenSans-Semibold");
+@include font-face("opensans-extrabold", "../fonts/Opensans-Extrabold/Opensans-Extrabold");
+
+@include font-face("BombayDisplay-Regular", "../fonts/BombayDisplay-Regular/BombayDisplay-Regular");
+@include font-face("SapphireSans", "../fonts/SapphireSans/SapphireSans");
+@include font-face("MessinaSerif-Book", "../fonts/MessinaSerif-Book/MessinaSerif-Book");

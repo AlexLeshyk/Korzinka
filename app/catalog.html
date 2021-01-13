@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Korzinka title</title>
+	<!-- SEO -->
+	<meta name="Description" content="">
+	<meta name="Rating" content="">
+	<meta name="Author" content="">
+	<meta name="Robots" content="index,follow">
+
+	<!-- META -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CONFIG -->
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- FAVICON -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Custom Browsers Color -->
+	<meta name="theme-color" content="#000">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- we can live with IE -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body class="no-touch">
+	<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<!-- Custom HTML -->
+
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
+		<!-- Header -->
+		<header class="header">
+			<div class="bg-black">
+				<div class="container container-flex">
+					<!-- Slogan -->
+					<div class="slogan">
+						<small>Добавляйте продукты в корзинку и отправляйтесь за покупками!</small>
+					</div>
+					<!-- Top menu -->
+					<nav class="nav">
+						<ul>
+							<li class="top-menu_item"><a class="top-menu_link" href="index.html">Главная</a></li>
+							<li class="top-menu_item active"><a class="top-menu_link" href="catalog.html">О проекте</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="product_page.html">Как пользоваться</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="cabinet.html">Партнерам</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="#">Контакты</a></li>
+							<li class="top-menu_item">
+								<button class="dropdown_button">Выпадашка</button>
+								<div class="dropdown_content">
+									<a class="dropdown_link" href="#">Какая-то сслыка</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 2</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 3</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-grey">
+				<div class="container">
+					<div class="account-table">
+	          <!-- Logo -->
+	          <a class="logo" href="index.html">Корзинка</a>
+	          <!-- Account information -->
+	          <div class="account">
+	            <div class="account-search">
+	              <input type="search">
+	              <a class="account-circle-link text-center svg-icon icon-search middle" href="#"></a>
+	            </div>
+	            <div class="account-favorite">
+	              <a class="account-circle-link text-center svg-icon icon-favorite middle" href="#"><span class="text-center">2</span></a>
+	            </div>
+	            <div class="account-list">
+	              <a class="account-circle-link text-center svg-icon icon-list middle" href="#"></a>
+	              <a class="account-link" href="#">мой список</a>
+	              <span>(9) позиций: <em>450 р.</em></span>
+	            </div>
+	            <div class="account-list account-green">
+	              <a class="account-circle-link text-center svg-icon icon-account middle" href="#"></a>
+	              <a class="account-link" href="#">мой аккаунт</a>
+	              <a class="log-out" href="#">Выход</a>
+	            </div>
+	          </div>
+	        </div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main block -->
+		<div class="bg-navigation">
+			<div class="container">
+				<!-- Main navigation -->
+				<nav>
+					<button type="button" class="nav-button js-collapse">
+						<span class="sr-only">Переключить навигацию</span>
+						<span aria-hidden="true" class="stroke bar1"></span>
+						<span aria-hidden="true" class="stroke bar2"></span>
+						<span aria-hidden="true" class="stroke bar3"></span>
+					</button>
+          <ul class="main-menu js-main-menu">
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Хлеб и выпечка</a>
+							<div class="sub-menu bread">
+								<div class="sub-menu-block">
+									<h5><a href="#">Хлеб</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Булочки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Выпечка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Фрукты и овощи</a>
+							<div class="sub-menu fruits">
+								<div class="sub-menu-block">
+									<h5><a href="#">Фрукты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Мясо, рыба,<span>птица</span></a>
+							<div class="sub-menu meat">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыба</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясо</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Птица</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Молочное, яйца</a>
+							<div class="sub-menu dairy">
+								<div class="sub-menu-block">
+									<h5><a href="#">Молоко</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Масло, маргарин</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Йогурты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сметана и сливки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Творог</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сыры</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Напитки,<span>Чай, кофе</span></a>
+							<div class="sub-menu tea">
+								<div class="sub-menu-block">
+									<h5><a href="#">Чай</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Кофе</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Какао</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мате</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Безалкогольные напитки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Соки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Минералка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Бакалея</a>
+							<div class="sub-menu grocery">
+								<div class="sub-menu-block">
+									<h5><a href="#">Крупа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Приправа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сладкое</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Сладости</a>
+							<div class="sub-menu sweet">
+								<div class="sub-menu-block">
+									<h5><a href="#">Конфеты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Зефир</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Вафли</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Консервы</a>
+							<div class="sub-menu canned">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыбные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Другие консервы</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Детское<span>питание</span></a>
+							<div class="sub-menu children">
+								<div class="sub-menu-block">
+									<h5><a href="#">Сухие смеси</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Фруктовые пюре</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Замороженные<span>продукты</span></a>
+							<div class="sub-menu frozen">
+								<div class="sub-menu-block">
+									<h5><a href="#">Пельмени</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Пицца</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+
+		<!-- Breadcrumbs -->
+		<div class="bg-breadcrumbs">
+			<div class="container">
+				<div class="crumbs">
+					<ul>
+						<li><a href="#">Главная</a><i class="fa fa-angle-right"></i></li>
+						<li><a href="#">Каталог</a><i class="fa fa-angle-right"></i></li>
+						<li class="active"><a href="#">Овощи и фрукты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content section -->
+		<section class="bg-params">
+			<div class="container">
+				<h1>Овощи и фрукты</h1>
+				<form class="price" name="form_params">
+					<!-- Price block -->
+					<div class="price-block">
+						<div class="price-header svg-icon icon-price">
+							<h5>Стоимость</h5>
+							<div class="og-see-details">?
+		      			<div class="og-tooltip">
+		      				<div class="og-popup-main">
+		      					<span class="og-close" role="button" tabindex="0">
+											<span class="visuallyhidden">Close</span>
+							  			<span class="stroke" aria-hidden="true"></span>
+							  			<span class="stroke" aria-hidden="true"></span>
+  						  		</span>
+    								<div class="details-header">
+    									<div class="detailstop">Повторяющийся заказ</div>
+    								</div>
+    								<div class="detailsmiddle">Далеко-далеко за словесными горами в стране, гласных и согласных.
+											Далеко-далеко за словесными горами в стране, гласных и согласных. <a href="cabinet.html" target="_self">
+    									Почитай FAQs здесь</a>.
+    								</div>
+    								<div class="detailsbottom">Далеко-далеко за словесными горами в стране, гласных и согласных.
+											Далеко-далеко за словесными горами в стране, гласных и согласных. <a href="cabinet.html" target="_self">FAQs</a> здесь немного текста.
+    								</div>
+    							</div>
+								</div>
+		      		</div>
+						</div>
+            <div class="price-block_inner">
+              <div class="form-group clear">
+                <div class="half">
+                  <input class="js-price-low" name="price1" type="text" placeholder="От (руб)">
+                </div>
+                <div class="half">
+                  <input class="js-price-high" name="price2" type="text" placeholder="До (руб)">
+                </div>
+              </div>
+  						<div class="range-price"></div>
+  						<label>
+                <input type="checkbox"><span class="box"></span>Включить все
+							</label>
+            </div>
+					</div>
+
+					<!-- Parametrs block -->
+					<div class="parametrs-block">
+						<div class="parametrs-header svg-icon icon-params">
+							<h5>Параметры товара</h5>
+							<div class="og-see-details">?
+		      			<div class="og-tooltip">
+		      				<div class="og-popup-main">
+                    <span class="og-close" role="button" tabindex="0">
+											<span class="visuallyhidden">Close</span>
+							  			<span class="stroke" aria-hidden="true"></span>
+							  			<span class="stroke" aria-hidden="true"></span>
+							  		</span>
+										<div class="details-header">
+											<div class="detailstop">Повторяющийся заказ</div>
+										</div>
+										<div class="detailsmiddle">Далеко-далеко за словесными горами в стране, гласных и согласных.
+											Далеко-далеко за словесными горами в стране, гласных и согласных. <a href="cabinet.html" target="_self">
+											Почитай FAQs здесь</a>.
+										</div>
+										<div class="detailsbottom">Далеко-далеко за словесными горами в стране, гласных и согласных.
+											Далеко-далеко за словесными горами в стране, гласных и согласных. <a href="cabinet.html" target="_self">FAQs</a> здесь немного текста.
+										</div>
+									</div>
+								</div>
+		      		</div>
+						</div>
+						<div class="parametrs-block-left">
+							<span class="param-title">Способ обработки:</span>
+              <div class="form-group">
+                <input id="param-box1" type="checkbox">
+  							<label class="icon" for="param-box1">Ультрапастеризованное</label>
+              </div>
+              <div class="form-group">
+                <input id="param-box3" type="checkbox">
+  							<label class="icon" for="param-box3">Стерилизованное</label>
+              </div>
+              <div class="form-group">
+                <input id="param-box4" type="checkbox">
+  							<label class="icon" for="param-box4">Топленое</label>
+              </div>
+						</div>
+						<div  class="parametrs-block-left">
+							<span class="param-title">Упаковка:</span>
+              <div class="form-group">
+                <input id="param-box5" type="checkbox">
+  							<label class="icon" for="param-box5">Пакет</label>
+              </div>
+              <div class="form-group">
+                <input id="param-box6" type="checkbox">
+  							<label class="icon" for="param-box6">Бутылка</label>
+              </div>
+              <div class="form-group">
+                <input id="param-box7" type="checkbox" disabled>
+  							<label class="icon" for="param-box7">Тетрапак</label>
+              </div>
+						</div>
+						<div class="parametrs-block-right">
+							<span class="param-title">Объем:</span>
+							<div class="range-volume"></div>
+							<span class="amount-volume"></span>
+							<select name="marka" id="param-sel1">
+								<option value="">Торговая марка</option>
+								<option value="1">Марка 1</option>
+								<option value="2">Марка 2</option>
+								<option value="3">Марка 3</option>
+								<option value="4">Марка 4</option>
+								<option value="5">Марка 5</option>
+								<option value="6">Марка 6</option>
+							</select>
+						</div>
+						<div class="parametrs-block-right">
+							<span class="param-title">Жирность:</span>
+							<div class="range-param"></div>
+							<span class="amount-param"></span>
+							<select name="producer" id="param-sel2">
+								<option value="">Страна-производитель</option>
+								<option value="">Страна 1</option>
+								<option value="">Страна 2</option>
+								<option value="">Страна 3</option>
+								<option value="">Страна 4</option>
+								<option value="">Страна 5</option>
+							</select>
+						</div>
+						<div class="parametrs-block-hidden">
+							<div class="parametrs-block-left">
+								<span class="param-title">Скрытый параметр :)</span>
+                <div class="form-group">
+  								<input id="hidden-box1" type="checkbox">
+  								<label class="icon" for="hidden-box1">Булочка</label>
+                </div>
+                <div class="form-group">
+  								<input id="hidden-box2" type="checkbox">
+  								<label class="icon" for="hidden-box2">Пакетик</label>
+                </div>
+                <div class="form-group">
+  								<input id="hidden-box3" type="checkbox">
+  								<label class="icon" for="hidden-box3">Мисочка</label>
+                </div>
+							</div>
+							<div class="parametrs-block-left">
+								<span class="param-title">Скрытая сила :)</span>
+                <div class="form-group">
+  								<input id="hidden-box4" type="checkbox">
+  								<label class="icon" for="hidden-box4">Молочко</label>
+                </div>
+                <div class="form-group">
+  								<input id="hidden-box5" type="checkbox">
+  								<label class="icon" for="hidden-box5">Кефирок</label>
+                </div>
+                <div class="form-group">
+  								<input id="hidden-box6" type="checkbox">
+  								<label class="icon" for="hidden-box6">Плитка</label>
+                </div>
+							</div>
+							<div class="parametrs-block-left">
+								<span class="param-title">Огурчик:</span>
+								<div class="form-group">
+									<input type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+									<label for="exampleRadios1"><span class="icon"></span>Солёный</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label for="exampleRadios2"><span class="icon"></span>Свежий</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled="disabled">
+                  <label for="exampleRadios3"><span class="icon"></span>Малосольный</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+                  <label for="exampleRadios4"><span class="icon"></span>Горький</label>
+								</div>
+							</div>
+						</div>
+						<div class="parametrs-block-more">
+							<a href="#" class="js-more"></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="bg-params">
+			<div class="container container-flex">
+				<div class="parametrs-popup js-parametrs-popup" data-popup="popup-tab-1">
+					<i class="svg-icon icon-price middle text-center"></i>Стоимость товара
+					<div class="parametrs-popup_text" id="popup-tab-1">
+						<span class="close"></span>
+						<h5 class="parametrs-popup_title">Стоимость</h5>
+						<ul class="parametrs-popup_list">
+							<li class="parametrs-popup_item">Первый пункт</li>
+							<li class="parametrs-popup_item">Второй пункт</li>
+							<li class="parametrs-popup_item">Третий пункт</li>
+						</ul>
+					</div>
+				</div>
+				<div class="parametrs-popup js-parametrs-popup" data-popup="popup-tab-2">
+					<i class="svg-icon icon-params middle text-center"></i>Параметры товара
+					<div class="parametrs-popup_text" id="popup-tab-2">
+						<span class="close"></span>
+						<h5 class="parametrs-popup_title">Параметры</h5>
+						<ul class="parametrs-popup_list">
+							<li class="parametrs-popup_item">Первый пункт</li>
+							<li class="parametrs-popup_item">Второй пункт</li>
+							<li class="parametrs-popup_item">Третий пункт</li>
+						</ul>
+					</div>
+				</div>
+				<div class="parametrs-popup js-parametrs-popup" data-popup="popup-tab-3">
+					<i class="svg-icon icon-like-checked middle text-center"></i>Объем
+					<div class="parametrs-popup_text" id="popup-tab-3">
+						<span class="close"></span>
+						<h5 class="parametrs-popup_title">Объем товара</h5>
+						<ul class="parametrs-popup_list">
+							<li class="parametrs-popup_item">Первый пункт</li>
+							<li class="parametrs-popup_item">Второй пункт</li>
+							<li class="parametrs-popup_item">Третий пункт</li>
+						</ul>
+					</div>
+				</div>
+				<div class="parametrs-popup js-parametrs-popup" data-popup="popup-tab-4">
+					<i class="svg-icon icon-like-checked middle text-center"></i>Доставка товара
+					<div class="parametrs-popup_text" id="popup-tab-4">
+						<span class="close"></span>
+						<h5 class="parametrs-popup_title">Доставка</h5>
+						<ul class="parametrs-popup_list">
+							<li class="parametrs-popup_item">Первый пункт</li>
+							<li class="parametrs-popup_item">Второй пункт</li>
+							<li class="parametrs-popup_item">Третий пункт</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <div class="bg-accordion">
+  		<div class="container">
+  			<div class="accordion-head">
+          <span data-tooltip="Ультрапастеризованное">Ультрапастеризованное</span>
+        </div>
+  			<div class="accordion-body">
+  				<p>Конечно же это так...</p>
+  			</div>
+  			<div class="accordion-head">
+          <span data-tooltip="Стерилизованное">Стерилизованное</span>
+        </div>
+  			<div class="accordion-body">
+  				<p>Что это могло бы быть?</p>
+  			</div>
+  			<div class="accordion-head">
+          <span data-tooltip="Топленое">Топленое</span>
+        </div>
+  			<div class="accordion-body">
+  				<p>Молоко здесь...</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  			</div>
+  		</div>
+    </div>
+
+    <div class="bg-accordion">
+    	<div class="container">
+	    	<div id="field-for-circle" class="field-for-circle">
+	    		<span id="circle" class="circle"></span>
+	    	</div>
+	    </div>
+    </div>
+
+    <div class="bg-accordion">
+      	<div class="container">
+      		<div class="large-thumbs">
+            <img id="largeImg" src="img/beverages.jpg" alt="Large image">
+          </div>
+      		<ul class="thumbs">
+    				<li>
+    					<a href="img/picture1.jpg" title="Image 1"><img alt="image1" src="img/picture1.jpg"></a>
+    				</li>
+    				<li>
+    					<a href="img/picture2.jpg" title="Image 2"><img alt="image2" src="img/picture2.jpg"></a>
+    				</li>
+    				<li>
+    					<a href="img/picture3.jpg" title="Image 3"><img alt="image3" src="img/picture3.jpg"></a>
+    				</li>
+    				<li>
+    					<a href="img/picture4.jpg" title="Image 4"><img alt="image4" src="img/picture4.jpg"></a>
+    				</li>
+    				<li>
+    					<a href="img/grocery.jpg" title="Image 5"><img alt="image5" src="img/grocery.jpg"></a>
+    				</li>
+						<li>
+    					<a href="img/beverages.jpg" title="Image 6"><img alt="image6" src="img/beverages.jpg"></a>
+    				</li>
+    			</ul>
+      	</div>
+    </div>
+
+		<div class="bg-accordion">
+      	<div class="container">
+					<div class="timeline-elem-wrapper">
+						<div class="timeline-text">
+							The current facility was built on 1958 in 127-acres in the town of Cataño. Baptized as “The Cathedral of Rum” by then Governors Luis Muñoz Marín, the facility is the largest premium rum distillery in the world.
+						</div>
+						<div class="timeline-image-square">
+							<div class="timeline-elem">
+								<img alt="image5" src="img/grocery.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="timeline-elem-wrapper">
+						<div class="timeline-text">
+							The current facility was built on 1958 in 127-acres in the town of Cataño. Baptized as “The Cathedral of Rum” by then Governors Luis Muñoz Marín, the facility is the largest premium rum distillery in the world.
+						</div>
+						<div class="timeline-image-square">
+							<div class="timeline-elem">
+								<img alt="image6" src="img/beverages.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="timeline-elem-wrapper">
+						<div class="timeline-text">
+							The current facility was built on 1958 in 127-acres in the town of Cataño. Baptized as “The Cathedral of Rum” by then Governors Luis Muñoz Marín, the facility is the largest premium rum distillery in the world.
+						</div>
+						<div class="timeline-image-square">
+							<div class="timeline-elem">
+								<img alt="image5" src="img/grocery.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="timeline-elem-wrapper">
+						<div class="timeline-text">
+							The current facility was built on 1958 in 127-acres in the town of Cataño. Baptized as “The Cathedral of Rum” by then Governors Luis Muñoz Marín, the facility is the largest premium rum distillery in the world.
+						</div>
+						<div class="timeline-image-square">
+							<div class="timeline-elem">
+								<img alt="image6" src="img/beverages.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="container">
+			<div class="video_wrapper video_wrapper_full js-videoWrapper">
+				<!-- <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/ET7OKIAf1Ig?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"></iframe> -->
+				<iframe class="videoIframe js-videoIframe" src="" allowTransparency="true" data-src="https://www.youtube.com/embed/MgYDJaD2yQ8?autoplay=1&rel=0&showinfo=0&modestbranding=1;" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				<button class="videoPoster js-videoPoster"></button>
+			</div>
+		</div>
+
+    <section class="bg-accordion">
+      <div class="container">
+        <div class="my-list-header">
+          <h3>Мой список дел</h3>
+            <div class="form-group">
+              <input type="text" class="myInput" id="myInput" placeholder="Название...">
+              <button class="btn my-list-add">Добавить</button>
+            </div>
+        </div>
+
+        <ul class="my-list">
+          <li>Посетить спортзал<span class="close"></span></li>
+          <li class="checked">Оплатить счета<span class="close"></span></li>
+          <li>Встретить Джоржа<span class="close"></span></li>
+          <li>Сходить в магазин<span class="close"></span></li>
+          <li>Прочитать книгу<span class="close"></span></li>
+          <li>Организовать офис<span class="close"></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <div class="container">
+        <h3>Тайм-лайн пример</h3>
+				<div class="timeline-item-wrapper">
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture1.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных. Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+						<span>11/04/2018</span>
+					</div>
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture2.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных</p>
+						<span>12/04/2018</span>
+					</div>
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture3.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+						<span>13/04/2018</span>
+					</div>
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture4.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+						<span>14/04/2018</span>
+					</div>
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture4.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+						<span>15/04/2018</span>
+					</div>
+	        <div class="timeline-item">
+						<div class="timeline-item-img">
+							<img src="img/picture4.jpg" alt="image1"/>
+						</div>
+						<p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+						<span>16/04/2018</span>
+					</div>
+				</div>
+      </div>
+    </section>
+
+		<!-- Catalog section -->
+		<section class="bg-catalog">
+			<div class="container">
+
+				<!-- Catalog sorting & pagination -->
+        <div class="catalog-items-block">
+  				<h4>Всего 135 товаров</h4>
+  				<div class="catalog_sort">
+  					<label for="catalog-sort1">Показать  по</label>
+  					<select class="quantity" id="catalog-sort1">
+  						<option value="">24</option>
+  						<option value="">36</option>
+  						<option value="">48</option>
+  					</select>
+  					<label for="catalog-sort2">Сортировать по</label>
+  					<select class="sorting" id="catalog-sort2">
+  						<option value="">Популярности</option>
+  						<option value="">Новинкам</option>
+  						<option value="">Акциям</option>
+  					</select>
+  				</div>
+  				<div class="catalog_tabs">
+  					<a class="svg-icon icon-table middle text-center" id="catalog-block-tab" data-tab="catalog-block" role="tab" aria-controls="catalog-block" aria-selected="true"></a>
+  					<a class="active svg-icon icon-catalog-list middle text-center" id="catalog-list-tab" data-tab="catalog-list" role="tab" aria-controls="catalog-list" aria-selected="false"></a>
+  				</div>
+  				<div class="catalog-pagination">
+						<ul class="catalog-pagination-list">
+							<li class="catalog-pagination-item prev"><a class="catalog-pagination-link" href="#"><i class="fa fa-angle-left"></i></a></li>
+							<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">1</a></li>
+							<li class="catalog-pagination-item active"><a class="catalog-pagination-link" href="#">2</a></li>
+							<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">3</a></li>
+							<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">4</a></li>
+							<li class="catalog-pagination-item next"><a class="catalog-pagination-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+						</ul>
+  				</div>
+				</div>
+
+				<!-- Catalog -->
+				<div class="catalog_block" id="catalog-block" role="tabpanel" aria-labelledby="catalog-block-tab" aria-hidden="hidden">
+          <div class="items-flex">
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<i class="yellow-price text-center">Супер<span>цена</span></i>
+  							<a class="block" href="#"><img src="img/picture1.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+  						<div class="stars">
+  							<input id="star-4" type="radio" name="stars">
+  						    <label title="gorgeous" for="star-4"></label>
+
+  						    <input id="star-3" type="radio" name="stars">
+  						    <label title="good" for="star-3"></label>
+
+  						    <input id="star-2" type="radio" name="stars">
+  						    <label title="regular" for="star-2"></label>
+
+  						    <input id="star-1" type="radio" name="stars">
+  						    <label title="poor" for="star-1"></label>
+
+  						    <input id="star-0" type="radio" name="stars">
+  						    <label title="bad" for="star-0"></label>
+  						</div>
+  						<div class="clear"></div>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture2.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<div class="stripe stripe-discount">-20%</div>
+  						<figure class="discount">
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<i class="yellow-price text-center">Супер<span>цена</span></i>
+  							<a class="block" href="#"><img src="img/picture3.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture4.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like like-checked svg-icon icon-like-checked middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture1.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture2.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture3.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<div class="stripe">новинка</div>
+  						<figure class="new">
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture4.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture1.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture2.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture3.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+  					<!-- catalog elem -->
+  					<div class="catalog_item">
+  						<figure>
+  							<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  							<a class="block" href="#"><img src="img/picture4.jpg" alt=""></a>
+  							<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  						</figure>
+              <div class="catalog_bottom">
+                <div class="rating-block">
+      						<span class="rating">рейтинг</span>
+      						<em>4,2</em>
+                </div>
+    						<button class="btn btn-active svg-icon icon-basket">добавить</button>
+              </div>
+  					</div>
+          </div>
+				</div>
+
+				<!-- Catalog list -->
+				<div class="catalog_block catalog_list active" id="catalog-list" role="tabpanel" aria-labelledby="catalog-list-tab" aria-hidden="false">
+					<div class="items-flex">
+	          <div class="form-group">
+	            <div class="catalog_item">
+	              <figure>
+	                <a class="like svg-icon icon-like middle text-center" href="#"></a>
+	                <i class="yellow-price text-center">Супер<span>цена</span></i>
+	                <a class="block" href="#">
+										<img src="img/picture1.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+	              </figure>
+	              <div class="catalog_description">
+	                <p><a href="#">Яблоки «Конференция»</a></p>
+	                <div class="clear">
+	                  <div class="stars">
+	                      <input id="stars1-4" type="radio" name="stars1">
+	                      <label title="gorgeous" for="stars1-4"></label>
+	                      <input id="stars1-3" type="radio" name="stars1">
+	                      <label title="good" for="stars1-3"></label>
+	                      <input id="stars1-2" type="radio" name="stars1">
+	                      <label title="regular" for="stars1-2"></label>
+	                      <input id="stars1-1" type="radio" name="stars1">
+	                      <label title="poor" for="stars1-1"></label>
+	                      <input id="stars1-0" type="radio" name="stars1">
+	                      <label title="bad" for="stars1-0"></label>
+	                  </div>
+	                  <span class="comment">Комментарии (4)</span>
+	                </div>
+	                <div class="catalog_bottom">
+	                  <div class="list">
+	                    <i>Производитель: <span>Германия</span></i>
+	                    <i>Фасовка: <span>Сетки</span></i>
+	                  </div>
+	                  <div class="rating-block">
+	                    <span class="rating">рейтинг</span>
+	                    <em>4,2</em>
+	                  </div>
+	                  <div class="button-block">
+	                    <div class="price">от<span>60.31</span>р</div>
+	                    <button class="btn btn-active svg-icon icon-basket">добавить</button>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <div class="catalog_item">
+	              <div class="stripe stripe-discount">-20%</div>
+	              <figure class="discount">
+	                <a class="like svg-icon icon-like middle text-center" href="#"></a>
+	                <a class="block" href="#">
+										<img src="img/picture2.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+	              </figure>
+	              <div class="catalog_description">
+	                <p><a href="#">Яблоки «Конференция»</a></p>
+	                <div class="clear">
+	                  <div class="stars">
+	                    <input id="stars-4" type="radio" name="stars2">
+	                    <label title="gorgeous" for="stars-4"></label>
+	                    <input id="stars-3" type="radio" name="stars2">
+	                    <label title="good" for="stars-3"></label>
+	                    <input id="stars-2" type="radio" name="stars2">
+	                    <label title="regular" for="stars-2"></label>
+	                    <input id="stars-1" type="radio" name="stars2">
+	                    <label title="poor" for="stars-1"></label>
+	                    <input id="stars-0" type="radio" name="stars2">
+	                    <label title="bad" for="stars-0"></label>
+	                  </div>
+	                  <span class="comment">Комментарии (4)</span>
+	                </div>
+	                <div class="catalog_bottom">
+	                  <div class="list">
+	                    <i>Производитель: <span>Германия</span></i>
+	                    <i>Фасовка: <span>Сетки</span></i>
+	                  </div>
+	                  <div class="rating-block">
+	                    <span class="rating">рейтинг</span>
+	                    <em>4,2</em>
+	                  </div>
+	                  <div class="button-block">
+	                    <div class="price">от<span>600.4</span>р</div>
+	                    <button class="btn btn-active svg-icon icon-basket">добавить</button>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="form-group">
+	            <div class="catalog_item">
+	              <figure>
+	                <a class="like like-checked svg-icon icon-like-checked middle text-center" href="#"></a>
+	                <a class="block" href="#">
+										<img src="img/picture3.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+	              </figure>
+	              <div class="catalog_description">
+	                <p><a href="#">Яблоки «Конференция»</a></p>
+	                <div class="clear">
+	                  <span class="comment">Комментарии (4)</span>
+	                </div>
+	                <div class="catalog_bottom">
+	                  <div class="list">
+	                    <i>Производитель: <span>Германия</span></i>
+	                    <i>Фасовка: <span>Сетки</span></i>
+	                  </div>
+	                  <div class="rating-block">
+	                    <span class="rating">рейтинг</span>
+	                    <em>4,2</em>
+	                  </div>
+	                  <div class="button-block">
+	                    <div class="price">от<span>50.45</span>р</div>
+	                    <button class="btn btn-active svg-icon icon-basket">добавить</button>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="form-group">
+            <div class="catalog_item">
+              <div class="stripe">новинка</div>
+              <figure class="new">
+                <a class="like svg-icon icon-like middle text-center" href="#"></a>
+                <a class="block" href="#">
+									<img src="img/picture4.jpg" alt="">
+									<div class="middle-block">
+								    <div class="text">добавить</div>
+								  </div>
+								</a>
+              </figure>
+              <div class="catalog_description">
+                <p><a href="#">Яблоки «Конференция»</a></p>
+                <div class="clear">
+                  <span class="comment">Комментарии (4)</span>
+                </div>
+                <div class="catalog_bottom">
+                  <div class="list">
+                    <i>Производитель: <span>Германия</span></i>
+                    <i>Фасовка: <span>Сетки</span></i>
+                  </div>
+                  <div class="rating-block">
+                    <span class="rating">рейтинг</span>
+                    <em>4,2</em>
+                  </div>
+                  <div class="button-block">
+                    <div class="price">от<span>6030.81</span>р</div>
+                    <button class="btn btn-active svg-icon icon-basket">добавить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+					</div>
+				</div>
+
+				<!-- Catalog pagination -->
+				<div class="catalog-pagination">
+					<ul class="catalog-pagination-list">
+						<li class="catalog-pagination-item prev"><a class="catalog-pagination-link" href="#"><i class="fa fa-angle-left"></i></a></li>
+						<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">1</a></li>
+						<li class="catalog-pagination-item active"><a class="catalog-pagination-link" href="#">2</a></li>
+						<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">3</a></li>
+						<li class="catalog-pagination-item"><a class="catalog-pagination-link" href="#">4</a></li>
+						<li class="catalog-pagination-item next"><a class="catalog-pagination-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer class="footer">
+
+			<div class="bg-footer-dark-grey">
+				<div class="container container-flex">
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<a href="#" class="logo"></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ultrices suscipit. Sed commodo vel mauris vel </p>
+						<strong>Email</strong>
+						<span>contact@korsinka.ru</span>
+						<!-- social icons block -->
+						<ul class="footer-social">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+						</ul>
+
+					</div>
+					<!-- footer site menu -->
+					<div class="footer-menu">
+						<h4>Меню сайта</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li class="active"><a href="#">О проекте</a></li>
+								<li><a href="#">Как пользоваться</a></li>
+								<li><a href="#">Партнерам</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- footer menu catalog -->
+					<div class="footer-catalog">
+						<h4>Категории товаров</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Фрукты и овощи</a></li>
+								<li><a href="#">Хлеб и выпечка</a></li>
+								<li><a href="#">Бакалея</a></li>
+								<li><a href="#">Консервы</a></li>
+								<li><a href="#">Мясо и рыба</a></li>
+								<li><a href="#">Сладости</a></li>
+								<li><a href="#">Напитки</a></li>
+								<li><a href="#">Молочные продукты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- Feedback form -->
+					<div class="footer-form">
+						<h4>Есть вопросы?</h4>
+						<span>Оставьте свое сообщение!</span>
+            <form class="form" name="form_footer" data-thank="Спасибо. Ваша заявка принята.">
+								<div class="form-group">
+                  <input name="email" id="contact-email" type="text" placeholder="Ваш E-mail"/>
+                  <label for="contact-email">Ваш E-mail</label>
+                </div>
+                <div class="form-group">
+				          <textarea id="contact-text" placeholder="Ваше сообщение"></textarea>
+                </div>
+								<button class="btn btn-active svg-icon icon-footer-send" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<div class="bg-footer-black">
+				<div class="container container-flex">
+					<div class="copyright">
+						<small>Copyright 2015 <span>Корзинка</span> Все права защищены</small>
+					</div>
+					<div class="design">
+						Designed by O. Shumilova
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<div class="scrollup js-up"></div>
+
+		<!-- JS -->
+		<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+
+  <title>Korzinka cabinet</title>
+  <!-- SEO -->
+  <meta name="Description" content="">
+  <meta name="Rating" content="">
+  <meta name="Author" content="">
+  <meta name="Robots" content="index,follow">
+
+  <!-- META -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CONFIG -->
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- FAVICON -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+  <!-- Custom Browsers Color -->
+  <meta name="theme-color" content="#000">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/main.min.css">
+
+  <!-- we can live with IE -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body class="no-touch">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="preloader">
+  		<div class="pulse"></div>
+  	</div>
+		<!-- Header -->
+		<header class="header">
+			<div class="bg-black">
+				<div class="container container-flex">
+					<!-- Slogan -->
+					<div class="slogan">
+						<small>Добавляйте продукты в корзинку и отправляйтесь за покупками!</small>
+					</div>
+					<!-- Top menu -->
+					<nav class="nav">
+						<ul>
+							<li class="top-menu_item"><a class="top-menu_link" href="index.html">Главная</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="catalog.html">О проекте</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="product_page.html">Как пользоваться</a></li>
+							<li class="top-menu_item active"><a class="top-menu_link" href="cabinet.html">Партнерам</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="#">Контакты</a></li>
+              <li class="top-menu_item">
+								<button class="dropdown_button">Выпадашка</button>
+								<div class="dropdown_content">
+									<a class="dropdown_link" href="#">Какая-то сслыка</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 2</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 3</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-grey">
+				<div class="container">
+          <div class="account-table">
+            <!-- Logo -->
+            <a class="logo" href="index.html">Корзинка</a>
+            <!-- Account information -->
+            <div class="account">
+              <div class="account-search">
+                <input type="search">
+                <a class="account-circle-link text-center svg-icon icon-search middle" href="#"></a>
+              </div>
+              <div class="account-favorite">
+                <a class="account-circle-link text-center svg-icon icon-favorite middle" href="#"><span class="text-center">2</span></a>
+              </div>
+              <div class="account-list">
+                <a class="account-circle-link text-center svg-icon icon-list middle" href="#"></a>
+                <a class="account-link" href="#">мой список</a>
+                <span>(9) позиций: <em>450 р.</em></span>
+              </div>
+              <div class="account-list account-green">
+                <a class="account-circle-link text-center svg-icon icon-account middle" href="#"></a>
+                <a class="account-link" href="#">мой аккаунт</a>
+                <a class="log-out" href="#">Выход</a>
+              </div>
+            </div>
+          </div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main block -->
+		<div class="bg-navigation">
+			<div class="container">
+				<!-- Main navigation -->
+				<nav>
+					<button type="button" class="nav-button js-collapse">
+						<span class="sr-only">Переключить навигацию</span>
+						<span aria-hidden="true" class="stroke bar1"></span>
+						<span aria-hidden="true" class="stroke bar2"></span>
+						<span aria-hidden="true" class="stroke bar3"></span>
+					</button>
+          <ul class="main-menu js-main-menu">
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Хлеб и выпечка</a>
+							<div class="sub-menu bread">
+								<div class="sub-menu-block">
+									<h5><a href="#">Хлеб</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Булочки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Выпечка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Фрукты и овощи</a>
+							<div class="sub-menu fruits">
+								<div class="sub-menu-block">
+									<h5><a href="#">Фрукты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Мясо, рыба,<span>птица</span></a>
+							<div class="sub-menu meat">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыба</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясо</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Птица</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Молочное, яйца</a>
+							<div class="sub-menu dairy">
+								<div class="sub-menu-block">
+									<h5><a href="#">Молоко</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Масло, маргарин</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Йогурты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сметана и сливки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Творог</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сыры</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Напитки,<span>Чай, кофе</span></a>
+							<div class="sub-menu tea">
+								<div class="sub-menu-block">
+									<h5><a href="#">Чай</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Кофе</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Какао</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мате</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Безалкогольные напитки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Соки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Минералка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Бакалея</a>
+							<div class="sub-menu grocery">
+								<div class="sub-menu-block">
+									<h5><a href="#">Крупа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Приправа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сладкое</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Сладости</a>
+							<div class="sub-menu sweet">
+								<div class="sub-menu-block">
+									<h5><a href="#">Конфеты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Зефир</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Вафли</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Консервы</a>
+							<div class="sub-menu canned">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыбные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Другие консервы</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Детское<span>питание</span></a>
+							<div class="sub-menu children">
+								<div class="sub-menu-block">
+									<h5><a href="#">Сухие смеси</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Фруктовые пюре</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Замороженные<span>продукты</span></a>
+							<div class="sub-menu frozen">
+								<div class="sub-menu-block">
+									<h5><a href="#">Пельмени</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Пицца</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+
+		<!-- Breadcrumbs -->
+		<div class="bg-breadcrumbs">
+			<div class="container">
+        <div class="crumbs pa">
+					<ul>
+						<li><a href="#">Главная</a><i class="fa fa-angle-right"></i></li>
+						<li><a href="#">Каталог</a><i class="fa fa-angle-right"></i></li>
+						<li class="active"><a href="#">Овощи и фрукты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Private account section -->
+		<section class="bg-private">
+			<div class="container">
+        <div class="private-header">
+          <div class="form-group">
+            <h1>Личный кабинет</h1>
+          </div>
+  				<div class="form-group private-title">
+  					<p>Ваш Email:<span>somemail@mail.ru</span></p>
+  					<p>Вы предпочитаете:<span>Вегетарианские продукты</span></p>
+  				</div>
+        </div>
+
+				<div class="private-up">
+					<!-- Personal account tabs -->
+					<ul class="private-tabs" tabindex="-1" role="tablist">
+						<li class="active svg-icon icon-basket" id="private-basket-tab" data-tab="private-basket" aria-setsize="3" aria-posinset="1" role="tab" aria-controls="private-basket" aria-selected="true" tabindex="0">
+              Ваша корзина <span>(4)</span>
+            </li>
+						<li class="svg-icon icon-favorite" id="private-favorite-tab" data-tab="private-favorite" aria-setsize="3" aria-posinset="2" role="tab" aria-controls="private-favorite" aria-selected="false" tabindex="0">
+              избранное
+            </li>
+						<li class="svg-icon icon-pensil-white" id="private-list-tab" data-tab="private-list" aria-setsize="3" aria-posinset="3" role="tab" aria-controls="private-list" aria-selected="false" tabindex="0">
+              мои списки
+            </li>
+					</ul>
+
+					<!-- Personal account sorting -->
+					<div class="private-sort">
+						<label for="private-sort-1">Показать  по</label>
+						<select id="private-sort-1">
+							<option value="">24</option>
+							<option value="">36</option>
+							<option value="">48</option>
+						</select>
+						<label for="private-sort-2">Сортировать по</label>
+						<select id="private-sort-2">
+							<option value="">Магазину</option>
+							<option value="">Новинкам</option>
+							<option value="">Акциям</option>
+						</select>
+					</div>
+				</div>
+
+
+				<!-- Personal account basket -->
+				<div class="private-block active" id="private-basket" role="tabpanel" aria-labelledby="private-basket-tab" aria-hidden="false">
+					<!-- Basket elem -->
+					<article class="private-item">
+						<figure>
+							<a href="#"><img src="img/picture1.jpg" alt=""></a>
+						</figure>
+						<div class="private-item_left">
+							<h4>Паприка сладкая</h4>
+							<span class="comment">Комментарии (4)</span>
+							<div class="clear"></div>
+							<div class="stars">
+								<input id="star-4" type="radio" name="stars">
+							  <label title="gorgeous" for="star-4"></label>
+
+							    <input id="star-3" type="radio" name="stars">
+							    <label title="good" for="star-3"></label>
+
+							    <input id="star-2" type="radio" name="stars">
+							    <label title="regular" for="star-2"></label>
+
+							    <input id="star-1" type="radio" name="stars">
+							    <label title="poor" for="star-1"></label>
+
+							    <input id="star-0" type="radio" name="stars">
+							    <label title="bad" for="star-0"></label>
+							</div>
+							<div class="clear"></div>
+							<ul>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Производитель: <span>Германия</span></li>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Фасовка: <span>Сетки</span></li>
+							</ul>
+						</div>
+						<div class="private-item_right">
+							<p>Магазин: Гиппо (ул. Строителей)</p>
+							<ul>
+								<li><em>Цена:</em><span>600 р.</span></li>
+								<li><em>Всего:</em><span class="total">1 200 р.</span></li>
+							</ul>
+						</div>
+						<div class="private-input-block">
+							<button class="up"></button>
+							<input type="text" id="" name="pa-amount" value="1">
+							<button class="down"></button>
+						</div>
+						<div class="private-button-block">
+							<button class="change-button svg-icon icon-change middle"></button>
+							<button class="delete-button svg-icon icon-close middle"></button>
+						</div>
+					</article>
+					<!-- Basket elem -->
+					<article class="private-item">
+						<figure>
+							<a href="#"><img src="img/picture2.jpg" alt=""></a>
+						</figure>
+						<div class="private-item_left">
+							<h4>Паприка сладкая</h4>
+							<span class="comment">Комментарии (4)</span>
+							<div class="clear"></div>
+							<div class="stars">
+								<input id="star1-4" type="radio" name="stars1">
+							    <label title="gorgeous" for="star1-4"></label>
+
+							    <input id="star1-3" type="radio" name="stars1">
+							    <label title="good" for="star1-3"></label>
+
+							    <input id="star1-2" type="radio" name="stars1">
+							    <label title="regular" for="star1-2"></label>
+
+							    <input id="star1-1" type="radio" name="stars1">
+							    <label title="poor" for="star1-1"></label>
+
+							    <input id="star1-0" type="radio" name="stars1">
+							    <label title="bad" for="star1-0"></label>
+							</div>
+							<div class="clear"></div>
+							<ul>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Производитель: <span>Германия</span></li>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Фасовка: <span>Сетки</span></li>
+							</ul>
+						</div>
+						<div class="private-item_right">
+							<p>Магазин: Гиппо (ул. Лесная)</p>
+							<ul>
+								<li><em>Цена:</em><span>600 р.</span></li>
+								<li><em>Всего:</em><span class="total">1 200 р.</span></li>
+							</ul>
+						</div>
+						<div class="private-input-block">
+							<button class="up"></button>
+							<input type="text" id="" name="pa-amount" value="1">
+							<button class="down"></button>
+						</div>
+						<div class="private-button-block">
+							<button class="change-button svg-icon icon-change middle"></button>
+							<button class="delete-button svg-icon icon-close middle"></button>
+						</div>
+					</article>
+          <!-- Basket elem -->
+          <article class="private-item">
+						<figure>
+							<a href="#"><img alt="image4" src="img/picture4.jpg"></a>
+						</figure>
+						<div class="private-item_left">
+							<h4>Паприка сладкая</h4>
+							<span class="comment">Комментарии (4)</span>
+							<div class="clear"></div>
+							<div class="stars">
+								<input id="star1-4" type="radio" name="stars1">
+							    <label title="gorgeous" for="star1-4"></label>
+
+							    <input id="star1-3" type="radio" name="stars1">
+							    <label title="good" for="star1-3"></label>
+
+							    <input id="star1-2" type="radio" name="stars1">
+							    <label title="regular" for="star1-2"></label>
+
+							    <input id="star1-1" type="radio" name="stars1">
+							    <label title="poor" for="star1-1"></label>
+
+							    <input id="star1-0" type="radio" name="stars1">
+							    <label title="bad" for="star1-0"></label>
+							</div>
+							<div class="clear"></div>
+							<ul>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Производитель: <span>Германия</span></li>
+								<li><i class="fa fa-angle-right" aria-hidden="true"></i>Фасовка: <span>Сетки</span></li>
+							</ul>
+						</div>
+						<div class="private-item_right">
+							<p>Магазин: Грин Маркет (ул. Супердлинная)</p>
+							<ul>
+								<li><em>Цена:</em><span>600 р.</span></li>
+								<li><em>Всего:</em><span class="total">1 200 р.</span></li>
+							</ul>
+						</div>
+						<div class="private-input-block">
+							<button class="up"></button>
+							<input type="text" id="" name="pa-amount" value="1">
+							<button class="down"></button>
+						</div>
+						<div class="private-button-block">
+							<button class="change-button svg-icon icon-change middle"></button>
+							<button class="delete-button svg-icon icon-close middle"></button>
+						</div>
+					</article>
+				</div>
+
+				<!-- Personal account favorite list -->
+				<div class="private-block" id="private-favorite" role="tabpanel" aria-labelledby="private-favorite-tab" aria-hidden="true">
+					<!-- Basket elem -->
+					<article class="private-item">
+            <h4>Паприка красная</h4>
+					</article>
+
+				</div>
+
+				<!-- Personal account my list -->
+				<div class="private-block" id="private-list" role="tabpanel" aria-labelledby="private-list-tab" aria-hidden="true">
+					<!-- Basket elem -->
+					<article class="private-item">
+            <h4>Паприка желтая</h4>
+					</article>
+				</div>
+
+				<!-- Personal account Total!-->
+				<div class="private-total">
+					<h3>Всего:<span>1 200 р.</span></h3>
+					<button class="btn btn-active">сохранить список</button>
+				</div>
+				<!-- Personal account Social block-->
+				<div class="private-social">
+					<a class="btn btn-active svg-icon icon-print" href="#">распечатать</a>
+					<a class="btn btn-active svg-icon icon-send" href="#">отослать на email</a>
+					<div class="private-social_block">
+						<h5>Поделиться</h5>
+						<ul class="social-block-links">
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- footer -->
+		<footer class="footer">
+
+			<div class="bg-footer-dark-grey">
+				<div class="container container-flex">
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<a href="#" class="logo"></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ultrices suscipit. Sed commodo vel mauris vel </p>
+						<strong>Email</strong>
+						<span>contact@korsinka.ru</span>
+						<!-- social icons block -->
+						<ul class="footer-social">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+						</ul>
+
+					</div>
+					<!-- footer site menu -->
+					<div class="footer-menu">
+						<h4>Меню сайта</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li class="active"><a href="#">О проекте</a></li>
+								<li><a href="#">Как пользоваться</a></li>
+								<li><a href="#">Партнерам</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- footer menu catalog -->
+					<div class="footer-catalog">
+						<h4>Категории товаров</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Фрукты и овощи</a></li>
+								<li><a href="#">Хлеб и выпечка</a></li>
+								<li><a href="#">Бакалея</a></li>
+								<li><a href="#">Консервы</a></li>
+								<li><a href="#">Мясо и рыба</a></li>
+								<li><a href="#">Сладости</a></li>
+								<li><a href="#">Напитки</a></li>
+								<li><a href="#">Молочные продукты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- Feedback form -->
+					<div class="footer-form">
+						<h4>Есть вопросы?</h4>
+						<span>Оставьте свое сообщение!</span>
+            <form class="form" name="form_footer" data-thank="Спасибо. Ваша заявка принята.">
+								<div class="form-group">
+                  <input name="email" id="contact-email" type="text" placeholder="Ваш E-mail"/>
+                  <label for="contact-email">Ваш E-mail</label>
+                </div>
+                <div class="form-group">
+				          <textarea id="contact-text" placeholder="Ваше сообщение"></textarea>
+                </div>
+								<button class="btn btn-active svg-icon icon-footer-send" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<div class="bg-footer-black">
+				<div class="container container-flex">
+					<div class="copyright">
+						<small>Copyright 2015 <span>Корзинка</span> Все права защищены</small>
+					</div>
+					<div class="design">
+						Designed by O. Shumilova
+					</div>
+				</div>
+			</div>
+
+		</footer>
+    <div class="scrollup js-up"></div>
+
+	  <!-- JS -->
+    <script src="js/scripts.min.js"></script>
+
+</body>
+</html>

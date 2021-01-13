@@ -1,0 +1,46 @@
+$default-font: "opensans", sans-serif;
+
+$lato-black: "lato-black", sans-serif;
+$lato-bold: "lato-bold", sans-serif;
+$opensans-bold: "opensans-bold", sans-serif;
+$opensans-extrabold: "opensans-extrabold", sans-serif;
+$opensans-semibold: "opensans-semibold", sans-serif;
+
+$accent: #f98629;
+$lightgreen: #90d23d;
+$text: #646464;
+$mid-blue: #00c3f2;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 20px;
+$grid-columns: 12;
+$grid-breakpoints: (mobile: 0, xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+
+$media-xs-md: 0 767px;
+$media-md-xl: 768px;
+$media-md-lg: 768px 1023px;
+$media-lg-xl: 1024px;
+$media-xxl: 1200px;
+$media-md-xxl: 768px 1199px;
+$media-xxs: 400px;
+$media-sm: 460px;
+
+$gutter: $grid-gutter-width;
+
+
+// bombay
+$bombay-display: "BombayDisplay-Regular", sans-serif;
+$bombay-sapphire: "SapphireSans", sans-serif;
+$mesina-book: "MessinaSerif-Book", serif;
+
+$mid-blue: #00c3f2;
+$light-blue-font: #02caf4;
+$mid-blue-container: #b5f4fd;
+$dark-blue: #000046;
+$white-color: #fff;
+$black-color: #000;
+$light-gray: #f2f2f2;
+$red: #df8372;
+$pink: #ffded5;

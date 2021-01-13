@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Korzinka title</title>
+	<!-- SEO -->
+  <meta name="Description" content="">
+  <meta name="Rating" content="">
+  <meta name="Author" content="">
+  <meta name="Robots" content="index,follow">
+
+	<!-- META -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CONFIG -->
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- FAVICON -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Custom Browsers Color -->
+	<meta name="theme-color" content="#000">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+  <!-- we can live with IE -->
+  <!--[if lt IE 9]>
+  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="no-touch">
+
+	<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+	<!-- Custom HTML -->
+	<!-- <div class="preloader">
+		<div class="pulse"></div>
+	</div> -->
+	<div class="overlay"></div>
+	<!-- Header -->
+		<header class="header">
+			<div class="bg-black">
+				<div class="container container-flex">
+					<!-- Slogan -->
+					<div class="slogan">
+						<small>Добавляйте продукты в корзинку и отправляйтесь за покупками!</small>
+					</div>
+					<!-- Top menu-->
+					<nav class="nav">
+						<ul>
+							<li class="top-menu_item active"><a class="top-menu_link" href="index.html">Главная</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="catalog.html">О проекте</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="product_page.html">Как пользоваться</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="cabinet.html">Партнерам</a></li>
+							<li class="top-menu_item"><a class="top-menu_link" href="#">Контакты</a></li>
+							<li class="top-menu_item">
+								<button class="dropdown_button">Выпадашка</button>
+								<div class="dropdown_content">
+									<a class="dropdown_link" href="#">Какая-то сслыка</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 2</a>
+									<a class="dropdown_link" href="#">Какая-то сслыка 3</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-grey">
+				<div class="container">
+					<div class="account-table">
+	          <!-- Logo -->
+	          <a class="logo" href="index.html">Корзинка</a>
+	          <!-- Account information -->
+	          <div class="account">
+	            <div class="account-search">
+	              <input type="search">
+	              <a class="account-circle-link text-center svg-icon icon-search middle" href="#"></a>
+	            </div>
+	            <div class="account-favorite">
+	              <a class="account-circle-link text-center svg-icon icon-favorite middle" href="#"><span class="text-center">2</span></a>
+	            </div>
+	            <div class="account-list">
+	              <a class="account-circle-link text-center svg-icon icon-list middle" href="#"></a>
+	              <a class="account-link" href="#">мой список</a>
+	              <span>(9) позиций: <em>450 р.</em></span>
+	            </div>
+	            <div class="account-list account-green">
+	              <a class="account-circle-link text-center svg-icon icon-account middle" href="#"></a>
+	              <a class="account-link" href="#">мой аккаунт</a>
+	              <a class="log-out" href="#">Выход</a>
+	            </div>
+	          </div>
+	        </div>
+				</div>
+			</div>
+		</header>
+
+		<nav class="fixed-nav js-fixed-nav">
+ 			<button class="fixed-nav_close outer-close-btn js-fixed-nav_close">
+ 				<span class="visuallyhidden"></span>
+ 			</button>
+			<div class="fixed-nav_navigation">
+				<div class="fixed-nav_btn js-tabs_label js-fixed-nav_btn" data-tab="fixed-nav-tab-1">
+					<i class="fixed-nav_btn-icon svg-icon icon-send-form middle"></i>
+					<span class="fixed-nav-menu_btn-text">Вкладка</span>
+				</div>
+				<div class="fixed-nav_btn js-tabs_label js-fixed-nav_btn" data-tab="fixed-nav-tab-2">
+					<i class="fixed-nav_btn-icon svg-icon icon-basket-gray middle"></i>
+					<span class="fixed-nav-menu_btn-text">Вкладка</span>
+				</div>
+				<div class="fixed-nav_btn js-tabs_label js-fixed-nav_btn" data-tab="fixed-nav-tab-3">
+					<i class="fixed-nav_btn-icon svg-icon icon-pensil-grey middle"></i>
+					<span class="fixed-nav-menu_btn-text">Вкладка</span>
+				</div>
+			</div>
+			<ul class="fixed-nav-menu">
+ 				<li class="fixed-nav-menu_item js-tabs_tab" data-tab="fixed-nav-tab-1">
+					<div class="fixed-nav_title text-center">Заголовок 1</div>
+					<div class="fixed-nav-menu_list">
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+					</div>
+				</li>
+				<li class="fixed-nav-menu_item js-tabs_tab" data-tab="fixed-nav-tab-2">
+					<div class="fixed-nav_title text-center">Заголовок 2</div>
+					<div class="fixed-nav-menu_list">
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+					</div>
+				</li>
+				<li class="fixed-nav-menu_item js-tabs_tab" data-tab="fixed-nav-tab-3">
+					<div class="fixed-nav_title text-center">Заголовок 3</div>
+					<div class="fixed-nav-menu_list">
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+						<a href="">Ссылка</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Main block -->
+		<section class="bg-navigation">
+			<div class="container">
+				<!-- Main navigation -->
+				<nav>
+					<button type="button" class="nav-button js-collapse">
+						<span class="sr-only">Переключить навигацию</span>
+						<span aria-hidden="true" class="stroke bar1"></span>
+						<span aria-hidden="true" class="stroke bar2"></span>
+						<span aria-hidden="true" class="stroke bar3"></span>
+					</button>
+					<ul class="main-menu js-main-menu">
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Хлеб и выпечка</a>
+							<div class="sub-menu bread lazy-background">
+								<div class="sub-menu-block">
+									<h5><a href="#">Хлеб</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Булочки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Выпечка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Фрукты и овощи</a>
+							<div class="sub-menu fruits lazy-background">
+								<div class="sub-menu-block">
+									<h5><a href="#">Фрукты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Мясо, рыба,<span>птица</span></a>
+							<div class="sub-menu meat">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыба</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясо</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Птица</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Молочное, яйца</a>
+							<div class="sub-menu dairy">
+								<div class="sub-menu-block">
+									<h5><a href="#">Молоко</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Масло, маргарин</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Йогурты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сметана и сливки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Творог</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сыры</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item">
+							<a class="main-menu_link" href="#">Напитки,<span>Чай, кофе</span></a>
+							<div class="sub-menu tea">
+								<div class="sub-menu-block">
+									<h5><a href="#">Чай</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Кофе</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Какао</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мате</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Безалкогольные напитки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Соки</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Минералка</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Бакалея</a>
+							<div class="sub-menu grocery" >
+								<div class="sub-menu-block">
+									<h5><a href="#">Крупа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Приправа</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Сладкое</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Сладости</a>
+							<div class="sub-menu sweet">
+								<div class="sub-menu-block">
+									<h5><a href="#">Конфеты</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Зефир</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Вафли</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+										<li><a href="#">Wordpress Theme</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Консервы</a>
+							<div class="sub-menu canned">
+								<div class="sub-menu-block">
+									<h5><a href="#">Рыбные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Мясные</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Другие консервы</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Детское<span>питание</span></a>
+							<div class="sub-menu children">
+								<div class="sub-menu-block">
+									<h5><a href="#">Сухие смеси</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Фруктовые пюре</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="main-menu_item fall-out">
+							<a class="main-menu_link" href="#">Замороженные<span>продукты</span></a>
+							<div class="sub-menu frozen">
+								<div class="sub-menu-block">
+									<h5><a href="#">Пельмени</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Овощи</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+										<li><a href="#">Web Design Inspirations</a></li>
+										<li><a href="#">Design Resources</a></li>
+									</ul>
+								</div>
+								<div class="sub-menu-block">
+									<h5><a href="#">Пицца</a></h5>
+									<ul class="second-menu">
+										<li><a href="#">Freebies</a></li>
+										<li><a href="#">Photography</a></li>
+										<li><a href="#">Fonts</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Products block -->
+				<div class="product">
+					<div class="product_block">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/cheese.jpg" data-srcset="img/@2x/cheese.jpg 2x" alt="cheese">
+						<div class="product_block_space">
+							<a href="#">Молочные продукты</a>
+						</div>
+					</div>
+					<div class="center_block text-center">
+						<i class="svg-icon icon-basket-gray"></i>
+						<span>сервис-каталог</span>
+						<h3>«Корзинка»</h3>
+						<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi </p>
+						<a href="#" class="btn btn-active">как это работает?</a>
+					</div>
+					<div class="product_block">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/vegetables.jpg" data-srcset="img/@2x/vegetables.jpg 2x" alt="vegetables">
+						<div class="product_block_space">
+							<a href="#">Овощи и фрукты</a>
+						</div>
+					</div>
+					<div class="product_block small">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/grocery.jpg" data-srcset="img/@2x/grocery.jpg 2x" alt="grocery">
+						<div class="product_block_space">
+							<a href="#">бакалея</a>
+						</div>
+					</div>
+					<div class="product_block">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/meat.jpg" data-srcset="img/@2x/meat.jpg 2x" alt="meat">
+						<div class="product_block_space">
+							<a href="#">мясо и рыба</a>
+						</div>
+					</div>
+					<div class="product_block small">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/beverages.jpg" data-srcset="img/@2x/beverages.jpg 2x" alt="beverages">
+						<div class="product_block_space">
+							<a href="#">напитки</a>
+						</div>
+					</div>
+					<div class="product_block">
+						<img class="lazy" src="thumb.gif" data-src="img/@2x/bread.jpg" data-srcset="img/@2x/bread.jpg 2x" alt="bread">
+						<div class="product_block_space">
+							<a href="#">хлеб и выпечка</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Content section -->
+		<section class="bg-content">
+			<div class="container">
+
+				<!-- Catalog header -->
+				<div class="catalog_header">
+					<h1>лучшие предложения</h1>
+					<span>По данным крупнейших гипермакетров Беларуси - “Гиппо”, “Евроопт”, “Соседи”.</span>
+					<select name="city" id="city-region">
+						<option value="">Минск</option>
+						<option value="">Брест</option>
+						<option value="">Гродно</option>
+						<option value="">Гомель</option>
+						<option value="">Витебск</option>
+						<option value="">Могилев</option>
+					</select>
+				</div>
+
+				<div class="app">
+					<div class="wrap">
+						<div id="select">
+						</div>
+					</div>
+				</div>
+
+				<!-- Catalog menu -->
+				<div class="catalog_menu">
+          <div class="catalog_menu-header">
+            <h4 class="text-center">Категории</h4>
+  					<button type="button" class="catalog_button js-catalog">
+  						<span class="sr-only">Переключить навигацию</span>
+  						<span aria-hidden="true" class="stroke bar1"></span>
+  						<span aria-hidden="true" class="stroke bar2"></span>
+  						<span aria-hidden="true" class="stroke bar3"></span>
+  					</button>
+          </div>
+					<ul class="catalog_inner js-catalog-menu">
+						<li class="catalog_inner-item">
+							<a class="catalog_inner-link" href="#">Фрукты и овощи</a>
+							<ul class="catalog_inner-list">
+								<li><a href="#">Фрукты</a></li>
+								<li><a href="#">овощи</a></li>
+							</ul>
+						</li>
+						<li class="catalog_inner-item">
+							<a class="catalog_inner-link" href="#">Бакалея</a>
+							<ul class="catalog_inner-list">
+								<li><a href="#">Крупы</a></li>
+								<li><a href="#">Сахар</a></li>
+							</ul>
+						</li>
+						<li class="catalog_inner-item">
+							<a class="catalog_inner-link" href="#">Мясо и рыба</a>
+							<ul class="catalog_inner-list">
+								<li><a href="#">Мясо</a></li>
+								<li><a href="#">Рыба</a></li>
+							</ul>
+						</li>
+						<li class="catalog_inner-item">
+							<a class="catalog_inner-link" href="#">Напитки</a>
+							<ul class="catalog_inner-list">
+								<li><a href="#">Минеральная вода</a></li>
+								<li><a href="#">Газированная вода</a></li>
+								<li class="active"><a href="#">Соки</a></li>
+								<li><a href="#">Цикорий</a></li>
+								<li><a href="#">Энергетики</a></li>
+								<li><a href="#">Сиропы</a></li>
+							</ul>
+						</li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Молочные продукты</a></li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Хлеб и выпечка</a></li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Консервы</a></li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Замороженные продукты</a></li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Детское питание</a></li>
+						<li class="catalog_inner-item"><a class="catalog_inner-link" href="#">Чай, кофе</a></li>
+					</ul>
+				</div>
+
+				<!-- Catalog -->
+				<div class="catalog">
+
+					<!-- Tabs catalog -->
+					<ul class="tabs" role="tablist">
+            <li class="tab active" id="catalog-popular-tab" aria-setsize="3" aria-posinset="1" data-tab="catalog-popular" role="tab" aria-controls="catalog-popular" aria-selected="true">
+							Популярное
+						</li>
+            <li class="tab" id="catalog-discount-tab" aria-setsize="3" aria-posinset="2" data-tab="catalog-discount" role="tab" aria-controls="catalog-discount" aria-selected="false">
+							Акции и скидки
+						</li>
+            <li class="tab" id="catalog-new-tab" aria-setsize="3" aria-posinset="3" data-tab="catalog-new" role="tab" aria-controls="catalog-new" aria-selected="false">
+							Новинки
+						</li>
+	        </ul>
+					<!-- First tab -->
+					<div class="tab_content active" id="catalog-popular" role="tabpanel" aria-labelledby="catalog-popular-tab" aria-hidden="false">
+            <div class="items-flex">
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture1.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция» длинный заголовок</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+                    <span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like like-checked svg-icon icon-like-checked middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture2.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<div class="stripe stripe-discount">-20%</div>
+  							<figure class="discount">
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture3.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<div class="stripe">новинка</div>
+  							<figure class="new">
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture4.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+							<!-- catalog elem -->
+							<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture1.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+                    <span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+
+  						</div>
+            </div>
+					</div>
+					<!-- Second tab -->
+					<div class="tab_content" id="catalog-discount" role="tabpanel" aria-labelledby="catalog-discount-tab" aria-hidden="true">
+            <div class="items-flex">
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture1.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture2.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture3.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture4.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+            </div>
+					</div>
+					<!-- Third tab -->
+					<div class="tab_content" id="catalog-new" role="tabpanel" aria-labelledby="catalog-new-tab" aria-hidden="true">
+            <div class="items-flex">
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<i class="yellow-price text-center">Супер<span>цена</span></i>
+  								<a class="block" href="#">
+										<img src="img/picture2.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture3.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture4.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+  						<!-- catalog elem -->
+  						<div class="catalog_item">
+  							<figure>
+  								<a class="like svg-icon icon-like middle text-center" href="#"></a>
+  								<a class="block" href="#">
+										<img src="img/picture1.jpg" alt="">
+										<div class="middle-block">
+									    <div class="text">добавить</div>
+									  </div>
+									</a>
+  								<figcaption><a href="#">Яблоки «Конференция»</a></figcaption>
+  							</figure>
+                <div class="catalog_bottom">
+                  <div class="rating-block">
+      							<span class="rating">рейтинг</span>
+      							<em>4,2</em>
+                  </div>
+    							<button class="btn btn-active svg-icon icon-basket">добавить</button>
+                </div>
+  						</div>
+            </div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- footer -->
+		<footer class="footer">
+
+			<div class="bg-footer-dark-grey">
+				<div class="container container-flex">
+					<!-- footer logo -->
+					<div class="footer-logo">
+						<a href="#" class="logo"></a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ultrices suscipit. Sed commodo vel mauris vel </p>
+						<strong>Email</strong>
+						<span>contact@korsinka.ru</span>
+						<!-- social icons block -->
+						<ul class="footer-social">
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+						</ul>
+
+					</div>
+					<!-- footer site menu -->
+					<div class="footer-menu">
+						<h4>Меню сайта</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li class="active"><a href="#">О проекте</a></li>
+								<li><a href="#">Как пользоваться</a></li>
+								<li><a href="#">Партнерам</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- footer menu catalog -->
+					<div class="footer-catalog">
+						<h4>Категории товаров</h4>
+						<nav class="footer-navigation">
+							<ul>
+								<li><a href="#">Фрукты и овощи</a></li>
+								<li><a href="#">Хлеб и выпечка</a></li>
+								<li><a href="#">Бакалея</a></li>
+								<li><a href="#">Консервы</a></li>
+								<li><a href="#">Мясо и рыба</a></li>
+								<li><a href="#">Сладости</a></li>
+								<li><a href="#">Напитки</a></li>
+								<li><a href="#">Молочные продукты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- Feedback form -->
+					<div class="footer-form">
+						<h4>Есть вопросы?</h4>
+						<span>Оставьте свое сообщение!</span>
+						<form class="form" name="form_footer" data-thank="Спасибо. Ваша заявка принята.">
+								<div class="form-group">
+                  <input name="password" id="contact-password" type="password" />
+                  <label for="contact-password">Ваш Пароль</label>
+                  <input name="show" type="checkbox" id="contact-password-check">
+                  <label class="icon" for="contact-password-check">Показать</label>
+                </div>
+                <div class="form-group">
+				          <textarea id="contact-text" placeholder="Ваше сообщение"></textarea>
+                </div>
+								<button class="btn btn-active svg-icon icon-footer-send" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<div class="bg-footer-black">
+				<div class="container container-flex">
+					<div class="copyright">
+						<small>Copyright 2015 <span>Корзинка</span> Все права защищены</small>
+					</div>
+					<div class="design">
+						Designed by O. Shumilova
+					</div>
+				</div>
+			</div>
+
+		</footer>
+		<div class="scrollup js-up"></div>
+
+		<!-- JS -->
+		<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

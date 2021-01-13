@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>facebook-midblue</title>
+    <desc>Created with Sketch.</desc>
+    <g id="BSD-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BSD-Assets" transform="translate(-580.000000, -1522.000000)">
+            <g id="facebook-midblue" transform="translate(580.000000, 1522.000000)">
+                <circle id="Oval" fill="#00C3F2" cx="24" cy="24" r="24"></circle>
+                <rect id="Rectangle" fill="#D8D8D8" x="23" y="23" width="2" height="2"></rect>
+                <g id="facebook" transform="translate(19.000000, 15.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M2.96077586,18.6241379 L2.96077586,10.4775862 L0,10.4775862 L0,7.10689655 L2.96077586,7.10689655 L2.96077586,4.53793103 C2.96077586,1.61422414 4.7012931,0 7.36508621,0 C8.64051724,0 9.975,0.227586207 9.975,0.227586207 L9.975,3.09741379 L8.50474138,3.09741379 C7.05603448,3.09741379 6.60431034,3.99612069 6.60431034,4.91810345 L6.60431034,7.10560345 L9.83706897,7.10560345 L9.31982759,10.4762931 L6.60431034,10.4762931 L6.60431034,18.6228448 L2.96077586,18.6241379 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
