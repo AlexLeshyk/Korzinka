@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>facebook-navy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="BSD-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BSD-Assets" transform="translate(-260.000000, -1522.000000)">
+            <g id="facebook-navy" transform="translate(260.000000, 1522.000000)">
+                <circle id="Oval" fill="#000046" cx="24" cy="24" r="24"></circle>
+                <rect id="Rectangle" fill="#D8D8D8" x="23" y="23" width="2" height="2"></rect>
+                <path d="M21.9607759,33.6241379 L21.9607759,25.4775862 L19,25.4775862 L19,22.1068966 L21.9607759,22.1068966 L21.9607759,19.537931 C21.9607759,16.6142241 23.7012931,15 26.3650862,15 C27.6405172,15 28.975,15.2275862 28.975,15.2275862 L28.975,18.0974138 L27.5047414,18.0974138 C26.0560345,18.0974138 25.6043103,18.9961207 25.6043103,19.9181034 L25.6043103,22.1056034 L28.837069,22.1056034 L28.3198276,25.4762931 L25.6043103,25.4762931 L25.6043103,33.6228448 L21.9607759,33.6241379 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
