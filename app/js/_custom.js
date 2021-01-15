@@ -177,17 +177,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 
-  // document.addEventListener("mouseup", function (e) {
-  //   var paramBodyTip = document.querySelector('.js-parametrs-popup');
-  //   if (e.target !== paramBodyTip && e.target.childNodes.length || paramBodyTip.childNodes.length === 0 ) {
-  //       console.log("vfvd",e.target.childNodes.length, paramBodyTip.childNodes.length, e.target);
-  //       var paramBodyTipBodies = document.getElementsByClassName('parametrs-popup_text');
-  //       for (var i = 0; i < paramBodyTipBodies.length; i++) {
-  //         paramBodyTipBodies[i].classList.remove('show');
-  //       }
-  //   }
-  // });
-
   /* Params popup close */
   $(document).bind("mouseup touchend", function (e) {
       var paramBodyTip = $('.js-parametrs-popup');
@@ -509,33 +498,33 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // show more block
-  var buttonShowMore = document.querySelectorAll('.product_description-right .all');
-  var listShowMore = document.querySelectorAll('.product_description-right li');
-  for (var j = 0; j < listShowMore.length; j++) {
-    if ( j >= 3) {
-      listShowMore[j].classList.add('invisible');
+  const listShowMore = document.querySelectorAll('.product_description-right li');
+  listShowMore.forEach((item, i) => {
+    if ( i >= 3) {
+      item.classList.add('invisible');
     }
-  }
-  for (var i = 0; i < buttonShowMore.length; i++) {
-    buttonShowMore[i].onclick = function () {
-      var listShowMore = document.querySelectorAll('.product_description-right li');
-      if ( buttonShowMore[i].classList.contains('show') ) {
-        buttonShowMore[i].classList.remove('show');
-        buttonShowMore[i].innerHTML = "Показать еще магазины";
-        for (var j = 0; j < listShowMore.length; j++) {
-          if ( j >= 3) {
-            listShowMore[j].classList.add('invisible');
-          }
+  });
+
+  document.addEventListener('click', function (e) {
+    const buttonShowMore = document.querySelector('.product_description-right .all');
+    let target = e.target;
+    if ( target !== buttonShowMore ) return;
+    if ( target.classList.contains('show') ) {
+      target.classList.remove('show');
+      target.innerHTML = 'Показать еще магазины';
+      listShowMore.forEach((item, i) => {
+        if ( i >= 3) {
+          item.classList.add('invisible');
         }
-      } else {
-        buttonShowMore[i].innerHTML = "Скрыть лишние";
-        buttonShowMore[i].classList.add('show');
-        for (var j = 0; j < listShowMore.length; j++) {
-          listShowMore[j].classList.remove('invisible');
-        }
-      }
+      });
+    } else {
+      target.innerHTML = 'Скрыть лишние';
+      target.classList.add('show');
+      listShowMore.forEach((item, i) => {
+        item.classList.remove('invisible');
+      });
     }
-  }
+  });
 
   // Quantity of products input
   var productQuantity = document.querySelector("input[name='prodQuantity']");
@@ -638,104 +627,85 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   /* Popup review */
-  var popup_bg_block = document.getElementsByClassName("bg-recall");
-  var bodyHtml = document.getElementsByClassName("no-touch");
 
-  document.addEventListener("mouseup", function (e) {
-    var closeButton = e.target.getAttribute('data-close');
-    var modal = document.getElementsByClassName("popup_recall");
-    for (var i = 0; i < modal.length; i++) {
-        if (e.target === modal[i] || closeButton === 'close' || (!e.target.childNodes.length && e.target.tagName === 'SPAN')) {
-            modal[i].classList.remove("show");
-            modal[i].classList.add('hiding');
-            var popup_body = document.querySelectorAll('.popup_body');
-            sleep(400).then(function() {
-              for (var i = 0; i < modal.length; i++) {
-                modal[i].classList.remove('hiding');
-              }
-              for (var i = 0; i < popup_body.length; i++) {
-                popup_body[i].remove();
-              }
-            });
-            for (var j = 0; j < bodyHtml.length; j++) {
-              bodyHtml[j].classList.remove('show');
-            }
-        }
+  document.addEventListener('mouseup', function (e) {
+    const closeButton = e.target.getAttribute('data-close');
+    const modal = document.querySelector('.popup_recall');
+    if (e.target === modal || closeButton === 'close') {
+      modal.classList.remove('show');
+      modal.classList.add('hiding');
+      const popup_body = document.querySelector('.popup_body');
+      sleep(400).then(function() {
+        modal.classList.remove('hiding');
+        popup_body.remove();
+      });
+      document.body.classList.remove('show');
     }
   });
 
-  for (var i = 0; i < popup_bg_block.length; i++) {
-      popup_bg_block[i].onclick = function (e) {
-          var target = e.target;
-          var action = target.getAttribute('data-open');
-          if (action === 'open') {
-              sleep(600).then(function() {
-                  var modal = document.getElementsByClassName("popup_recall");
-                  for (var i = 0; i < modal.length; i++) {
-                    modal[i].classList.add("show");
-                  }
-                  for (var j = 0; j < bodyHtml.length; j++) {
-                      bodyHtml[j].classList.add('show');
-                  }
-                  var popup_body = document.querySelector('.popup_recall');
-                  var content = `<div class="popup_body">
-                                  <span class="close js-close" role="button" data-close="close">
-                                    <span></span><span></span>
-                                  </span>
-                                  <div class="popup_content">
-                                    <div class="popup_header">
-                                      <h2>поделитесь вашим мнением</h2>
-                                    </div>
-                                    <form name="comment_form" class="form" data-thank="Спасибо. Ваше мнение принято.">
-                                      <div class="form-group">
-                                        <input name="com_name" class="required" id="comment-name" type="text" placeholder="Ваше имя">
-                                        <span id="com_name" class="error">Введите имя</span>
-                                      </div>
-                                      <div class="form-group">
-                                        <textarea name="com_area" id="comment-message" placeholder="Ваше сообщение"></textarea>
-                                        <span class="error">Введите текстовое сообщение</span>
-                                      </div>
-                                      <button class="btn btn-active" type="submit">Оставить комментарий</button>
-                                    </form>
-                                  </div>
-                                </div>`;
-                  popup_body.insertAdjacentHTML("beforeEnd", content );
-              });
-          }
-      };
-  }
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    let action = target.getAttribute('data-open');
+    if (action !== 'open') return;
+    sleep(600).then(function() {
+      const popup_body = document.querySelector('.popup_recall');
+      popup_body.classList.add('show');
+      document.body.classList.add('show');
+      const content = `<div class="popup_body">
+                      <span class="close js-close" role="button" data-close="close"></span>
+                      <div class="popup_content">
+                        <div class="popup_header">
+                          <h2>поделитесь вашим мнением</h2>
+                        </div>
+                        <form name="comment_form" class="form" data-thank="Спасибо. Ваше мнение принято.">
+                          <div class="form-group">
+                            <input name="com_name" class="required" id="comment-name" type="text" placeholder="Ваше имя">
+                            <span id="com_name" class="error">Введите имя</span>
+                          </div>
+                          <div class="form-group">
+                            <textarea name="com_area" id="comment-message" placeholder="Ваше сообщение"></textarea>
+                            <span class="error">Введите текстовое сообщение</span>
+                          </div>
+                          <button class="btn btn-active" type="submit">Оставить комментарий</button>
+                        </form>
+                      </div>
+                    </div>`;
+      popup_body.insertAdjacentHTML('beforeend', content );
+    });
+  });
 
-  /* Parametrs popup */
-  var paramPopupClose = document.querySelectorAll('.js-parametrs-popup .close');
-  var paramPopup = document.getElementsByClassName('js-parametrs-popup');
-  for (var i = 0; i < paramPopup.length; i++) {
-      paramPopup[i].onclick = function (e) {
-          var paramBodyTips = document.getElementsByClassName('parametrs-popup_text');
-          var tabPopup = this.getAttribute('data-popup');
+  // Parametrs popup
+  const paramPopupClose = document.querySelectorAll('.js-parametrs-popup .close');
+  const paramPopupsBody = document.querySelector('.js-parametrs');
+  if (paramPopupsBody !== null) {
+    paramPopupsBody.addEventListener('click',(e) => {
+      let target = e.target.closest('div.js-parametrs-popup');
+      let tabPopup = target.getAttribute('data-popup');
+      const paramBodyTips = document.getElementsByClassName('parametrs-popup_text');
+      if (!e.target.matches('.js-parametrs-popup') && !e.target.matches('i') && !e.target.matches('.close')) return;
 
-          if (this.lastElementChild.classList.contains('show')) {
-            for (var i = 0; i < paramBodyTips.length; i++) {
-              paramBodyTips[i].classList.remove('show');
-            }
-          } else {
-            for (var i = 0; i < paramBodyTips.length; i++) {
-              paramBodyTips[i].classList.remove('show');
-            }
-            document.getElementById(tabPopup).classList.add('show');
-          }
-
-          for (var i = 0; i < paramPopupClose.length; i++) {
-              var  target = e.target;
-              if (target == paramPopupClose[i]) {
-                  target.parentElement.classList.remove("show");
-              }
-          }
-          if (this.getBoundingClientRect().top < document.getElementById(tabPopup).offsetHeight) {
-              document.getElementById(tabPopup).classList.add('bottom');
-          } else {
-              document.getElementById(tabPopup).classList.remove('bottom');
-          }
+      if (target.lastElementChild.classList.contains('show')) {
+        for (let item of paramBodyTips) {
+          item.classList.remove('show');
+        }
+      } else {
+        for (let item of paramBodyTips) {
+          item.classList.remove('show');
+        }
+        document.getElementById(tabPopup).classList.add('show');
       }
+
+      for (let item of paramPopupClose) {
+        if (item === e.target) {
+          target.parentElement.classList.remove('show');
+        }
+      }
+      if (target.getBoundingClientRect().top < document.getElementById(tabPopup).offsetHeight) {
+        document.getElementById(tabPopup).classList.add('bottom');
+      } else {
+        document.getElementById(tabPopup).classList.remove('bottom');
+      }
+    });
   }
 
   // Items click to like icon
@@ -755,60 +725,57 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Click to Image
-  var productImg = document.querySelectorAll('.product_image img');
-  for (var i = 0; i < productImg.length; i++) {
-      productImg[i].onclick = function () {
-          var modalImgWrap = document.querySelector('.product_image + .modal');
-          var captionText = document.createElement('div');
-          var modalImg = document.createElement('img');
-          var modalClose = document.querySelector(".modal .close");
-          modalImgWrap.style.display = "block";
-          modalImg.src = this.src;
-          modalImg.classList.add('modal-content');
-          captionText.classList.add('modal-caption');
-          captionText.innerHTML = this.alt;
-          modalImgWrap.insertAdjacentElement("afterBegin", modalImg );
-          modalImg.insertAdjacentElement("afterEnd", captionText );
-          modalImgWrap.onclick = function(e) {
-            var target = e.target;
-            if ( target !== modalImg ) {
-                modalImgWrap.style.display = "none";
-                modalImgWrap.removeChild(modalImg);
-                modalImgWrap.removeChild(captionText);
-            }
-          }
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    const productImg = document.querySelector('.product_image img');
+    if (target !== productImg) return;
+    const modalImgWrap = document.querySelector('.product_image + .modal');
+    const captionText = document.createElement('div');
+    const modalImg = document.createElement('img');
+    const modalClose = document.querySelector('.modal .close');
+    modalImgWrap.classList.add('open');
+    modalImg.src = target.src;
+    modalImg.classList.add('modal-content');
+    captionText.classList.add('modal-caption');
+    captionText.innerHTML = target.alt;
+    modalImgWrap.insertAdjacentElement('afterbegin', captionText );
+    modalImgWrap.insertAdjacentElement('afterbegin', modalImg );
+    modalImgWrap.onclick = function(e) {
+      let target = e.target;
+      if ( target !== modalImg ) {
+        modalImgWrap.classList.remove('open');
+        modalImg.remove();
+        captionText.remove();
       }
-  }
+    }
+  });
 
   // Accordion
-  const accHead = document.querySelector('.bg-accordion');
-  if (accHead !== null) {
-    accHead.addEventListener('click',(e) => {
-      let target = e.target;
-      if (target.classList.contains('accordion-head') || e.target.tagName === 'SPAN') {
-        let targetDivHead = target.closest('div');
-        let nextElem = targetDivHead.nextElementSibling;
-        if (targetDivHead.classList.contains('active')) {
-          nextElem.classList.remove('open');
-          nextElem.style.maxHeight = null;
-          targetDivHead.classList.remove('active');
-        } else {
-          const acc_head = document.getElementsByClassName('accordion-head');
-          for (let item of acc_head) {
-            item.classList.remove('active');
-          }
-          const acc_body = document.getElementsByClassName('accordion-body');
-          for (let item of acc_body) {
-            item.classList.remove('open');
-            item.style.maxHeight = null;
-          }
-          targetDivHead.classList.add('active');
-          nextElem.classList.add('open');
-          nextElem.style.maxHeight = nextElem.scrollHeight + 'px';
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    if (target.classList.contains('accordion-head') || target.dataset === 'tooltip') {
+      let targetDivHead = target.closest('div');
+      let nextElem = targetDivHead.nextElementSibling;
+      if (targetDivHead.classList.contains('active')) {
+        nextElem.classList.remove('open');
+        nextElem.style.maxHeight = null;
+        targetDivHead.classList.remove('active');
+      } else {
+        const acc_head = document.getElementsByClassName('accordion-head');
+        for (let item of acc_head) {
+          item.classList.remove('active');
         }
+        const acc_body = document.getElementsByClassName('accordion-body');
+        for (let item of acc_body) {
+          item.classList.remove('open');
+          item.style.maxHeight = null;
+        }
+        targetDivHead.classList.add('active');
+        nextElem.classList.add('open');
+        nextElem.style.maxHeight = nextElem.scrollHeight + 'px';
       }
-    });
-  }
+    }
+  });
 
   let tooltipElem;
   document.onmouseover = function (e) {
@@ -947,7 +914,7 @@ document.addEventListener("DOMContentLoaded", function() {
           spanElem.classList.add('close');
           item.append(spanElem);
         }
-        
+
         closeListELement('.my-list .close');
       }
     });
@@ -1082,15 +1049,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   window.addEventListener('click', function (e) {
-      if (!e.target.matches('.dropdown_button')) {
-          var dropdownBlock = document.getElementsByClassName('dropdown_content');
-          for ( var i = 0; i < dropdownBlock.length; i++) {
-              var openDropdown = dropdownBlock[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-          }
+    if (!e.target.matches('.dropdown_button')) {
+      const dropdownBlock = document.getElementsByClassName('dropdown_content');
+      for (let openDropdown of dropdownBlock) {
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
       }
+    }
   });
 
 });
@@ -1156,8 +1122,8 @@ async function fetchAsyncTodos() {
     var dataContent = data[j].title;
     var dataContentSpan = '<span>' + data[j].completed + '</span>';
     if (dataObjectInner[j] !== null) {
-      dataObjectInner[j].insertAdjacentHTML("afterBegin", dataContent);
-      dataObjectInner[j].insertAdjacentHTML("afterEnd", dataContentSpan);
+      dataObjectInner[j].insertAdjacentHTML("afterbegin", dataContent);
+      dataObjectInner[j].insertAdjacentHTML("afterend", dataContentSpan);
     }
   }
 
