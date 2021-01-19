@@ -1630,7 +1630,7 @@ form.price {
         visibility: visible;
         opacity: 1;
     }
-    i {
+    &_icon {
       position: absolute;
       top: -1px;
       left: -1px;
@@ -3227,7 +3227,7 @@ form.price {
 }
 .my-list {
     border: 1px solid #eeeeee;
-    li {
+    &-li {
         cursor: pointer;
         position: relative;
         padding: 12px 40px;
@@ -3267,35 +3267,35 @@ form.price {
         &:hover {
             background: #ededed;
         }
-        .close {
+    }
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 10px 15px;
+        height: 100%;
+        &:hover {
+            background-color: $accent;
+        }
+        &:hover::after,
+        &:hover::before {
+            background-color: #ffffff;
+        }
+        &::after,
+        &::before {
+            content: "";
             position: absolute;
-            right: 0;
-            top: 0;
-            padding: 10px 15px;
-            height: 100%;
-            &:hover {
-                background-color: $accent;
-            }
-            &:hover::after,
-            &:hover::before {
-                background-color: #ffffff;
-            }
-            &::after,
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 18px;
-                height: 3px;
-                background: #363636;
-            }
-            &::after {
-                transform: translate(-50%, -50%) rotate(-45deg);
-            }
-            &::before {
-                transform: translate(-50%, -50%) rotate(45deg);
-            }
+            top: 50%;
+            left: 50%;
+            width: 18px;
+            height: 3px;
+            background: #363636;
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
         }
     }
 }

@@ -127,47 +127,47 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // question popup
-  $('.og-see-details').on('click', function (e) {
-      let popupQuestion = $(this);
-      let left = popupQuestion.offset().left;
-      let top = popupQuestion.offset().top;
-      let popup = $(this).find('.og-tooltip');
-      let popupLink = popup.find('a');
-      let popupClose = $(this).find('.og-close');
-
-      let popupWidth = popup.outerWidth();
-      let popupHeight = popup.outerHeight();
-      let questionWidth = $(this).outerWidth();
-      let popupPosition = $(window).width() - left - questionWidth;
-      let scrollPosition = $(window).scrollTop();
-      if (popup.is(e.target) || popup.has(e.target).length !== 0) {
-          if (popupClose.is(e.target) || popupClose.has(e.target).length !== 0) {
-              popupQuestion.removeClass('og-active');
-          }
-          if (popupLink.is(e.target)) {
-              return;
-          }
-          return false;
+  const popupQuestions = document.querySelectorAll('.og-see-details');
+  for (let item of popupQuestions) {
+    item.addEventListener('click', function (e) {
+      const left = this.getBoundingClientRect().left;
+      const top = this.getBoundingClientRect().top;
+      const popup = item.firstElementChild;
+      const popupLink = item.querySelectorAll('a');
+      const popupClose = item.querySelector('.og-close');
+      if ( item !== e.target ) {
+        if (popupClose === e.target || (e.target.tagName === 'SPAN')) {
+          item.classList.remove('og-active');
+        }
+        if (popupLink === e.target) return;
+        return false;
       }
-      if ($(this).hasClass('og-active')) {
-          $('.og-see-details').removeClass('og-active');
+      if (item.classList.contains('og-active')) {
+        for (let popupItem of popupQuestions) {
+          popupItem.classList.remove('og-active');
+        }
       } else {
-          $('.og-see-details').removeClass('og-active');
-          $(this).toggleClass('og-active');
+        for (let popupItem of popupQuestions) {
+          popupItem.classList.remove('og-active');
+        }
+        item.classList.toggle('og-active');
       }
-
-      if (top - scrollPosition < popupHeight) {
-          popupQuestion.addClass('bottom');
+      const popupWidth = popup.offsetWidth;
+      const popupHeight = popup.offsetHeight;
+      const questionWidth = item.offsetWidth;
+      const popupPosition = document.documentElement.clientWidth - left - questionWidth;
+      if (top < popupHeight) {
+        item.classList.add('bottom');
       } else {
-          popupQuestion.removeClass('bottom');
+        item.classList.remove('bottom');
       }
-
       if (popupPosition < popupWidth / 2) {
-          popup.css('margin-left', -(popupWidth - popupPosition));
+        popup.style.marginLeft = -(popupWidth - popupPosition) + 'px';
       } else {
-          popup.css('margin-left', -(popupWidth / 2));
+        popup.style.marginLeft = -(popupWidth / 2) + 'px';
       }
-  });
+    });
+  }
 
   /* Og tooltip close */
   $(document).bind("mouseup touchend", function (e) {
@@ -627,20 +627,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   /* Popup review */
-
   document.addEventListener('mouseup', function (e) {
-    const closeButton = e.target.getAttribute('data-close');
     const modal = document.querySelector('.popup_recall');
-    if (e.target === modal || closeButton === 'close') {
-      modal.classList.remove('show');
-      modal.classList.add('hiding');
-      const popup_body = document.querySelector('.popup_body');
-      sleep(400).then(function() {
-        modal.classList.remove('hiding');
-        popup_body.remove();
-      });
-      document.body.classList.remove('show');
-    }
+    if (e.target !== modal && e.target.getAttribute('data-close') !== 'close' ) return;
+    modal.classList.remove('show');
+    modal.classList.add('hiding');
+    const popup_body = document.querySelector('.popup_body');
+    sleep(400).then(function() {
+      modal.classList.remove('hiding');
+      popup_body.remove();
+    });
+    document.body.classList.remove('show');
   });
 
   document.addEventListener('click', function (e) {
@@ -677,36 +674,34 @@ document.addEventListener("DOMContentLoaded", function() {
   // Parametrs popup
   const paramPopupClose = document.querySelectorAll('.js-parametrs-popup .close');
   const paramPopupsBody = document.querySelector('.js-parametrs');
-  if (paramPopupsBody !== null) {
-    paramPopupsBody.addEventListener('click',(e) => {
-      let target = e.target.closest('div.js-parametrs-popup');
-      let tabPopup = target.getAttribute('data-popup');
-      const paramBodyTips = document.getElementsByClassName('parametrs-popup_text');
-      if (!e.target.matches('.js-parametrs-popup') && !e.target.matches('i') && !e.target.matches('.close')) return;
+  document.addEventListener('click', function (e) {
+    if (!e.target.matches('.js-parametrs-popup') && !e.target.matches('.parametrs-popup_icon') && !e.target.matches('.js-parametrs-close')) return;
+    let target = e.target.closest('div.js-parametrs-popup');
+    let tabPopup = target.getAttribute('data-popup');
+    const paramBodyTips = document.getElementsByClassName('parametrs-popup_text');
 
-      if (target.lastElementChild.classList.contains('show')) {
-        for (let item of paramBodyTips) {
-          item.classList.remove('show');
-        }
-      } else {
-        for (let item of paramBodyTips) {
-          item.classList.remove('show');
-        }
-        document.getElementById(tabPopup).classList.add('show');
+    if (target.lastElementChild.classList.contains('show')) {
+      for (let item of paramBodyTips) {
+        item.classList.remove('show');
       }
+    } else {
+      for (let item of paramBodyTips) {
+        item.classList.remove('show');
+      }
+      document.getElementById(tabPopup).classList.add('show');
+    }
 
-      for (let item of paramPopupClose) {
-        if (item === e.target) {
-          target.parentElement.classList.remove('show');
-        }
+    for (let item of paramPopupClose) {
+      if (item === e.target) {
+        target.parentElement.classList.remove('show');
       }
-      if (target.getBoundingClientRect().top < document.getElementById(tabPopup).offsetHeight) {
-        document.getElementById(tabPopup).classList.add('bottom');
-      } else {
-        document.getElementById(tabPopup).classList.remove('bottom');
-      }
-    });
-  }
+    }
+    if (target.getBoundingClientRect().top < document.getElementById(tabPopup).offsetHeight) {
+      document.getElementById(tabPopup).classList.add('bottom');
+    } else {
+      document.getElementById(tabPopup).classList.remove('bottom');
+    }
+  });
 
   // Items click to like icon
   var likeIcons = document.querySelectorAll('.like');
@@ -777,6 +772,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // tooltip on hover
   let tooltipElem;
   document.onmouseover = function (e) {
     let target = e.target;
@@ -874,13 +870,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //Todo list
   const list = document.querySelector('.my-list');
-  if (list !== null) {
-    list.addEventListener('click', function (e) {
-      if (e.target.tagName === 'LI') {
-        e.target.classList.toggle('checked');
-      }
-    }, false);
-  }
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('my-list-li')) {
+      e.target.classList.toggle('checked');
+    }
+  }, false);
 
   function closeListELement(selector) {
     const closeElem = document.querySelectorAll(selector);
@@ -893,32 +887,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   closeListELement('.my-list .close');
 
-  const addListHeader = document.querySelector('.my-list-header');
-  if (addListHeader !== null) {
-    addListHeader.addEventListener('click', (e) => {
-      let target = e.target;
-      if (target.classList.contains('my-list-add')) {
-        let li = document.createElement('LI');
-        let inputValue = document.querySelector('.myInput').value;
-        let t = document.createTextNode(inputValue);
-        li.append(t);
-        if (inputValue !== '') {
-          list.append(li);
-        }
-
-        document.querySelector('.myInput').value = '';
-
-        const mylistTask = document.querySelectorAll('.my-list li');
-        for (let item of mylistTask) {
-          let spanElem = document.createElement('SPAN');
-          spanElem.classList.add('close');
-          item.append(spanElem);
-        }
-
-        closeListELement('.my-list .close');
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    if (target.classList.contains('my-list-add')) {
+      const li = document.createElement('LI');
+      const inputValue = document.querySelector('.myInput').value;
+      const t = document.createTextNode(inputValue);
+      li.classList.add('my-list-li');
+      li.append(t);
+      if (inputValue !== '') {
+        list.append(li);
       }
-    });
-  }
+
+      document.querySelector('.myInput').value = '';
+
+      const mylistTask = document.querySelectorAll('.my-list-li');
+      for (let item of mylistTask) {
+        let spanElem = document.createElement('SPAN');
+        spanElem.classList.add('close');
+        item.append(spanElem);
+      }
+
+      closeListELement('.my-list .close');
+    }
+  });
 
   // sub menu links on hover
   for (var i = 0; i < sub_menu.length; i++) {
@@ -939,44 +931,35 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // fixed navigation menu
-  var fixedNavBtn = document.getElementsByClassName('js-fixed-nav_btn');
-  var overlayBack = document.getElementsByClassName('overlay');
-  var fixedNavClose = document.querySelectorAll('.js-fixed-nav_close');
+  const fixedNavBtn = document.getElementsByClassName('js-fixed-nav_btn');
+  const overlayBack = document.querySelector('.overlay');
+  const fixedNavClose = document.querySelector('.js-fixed-nav_close');
 
-  for (var i = 0; i < fixedNavBtn.length; i++) {
-      fixedNavBtn[i].onclick = function () {
-          document.querySelector('.js-fixed-nav').classList.add('opened');
-          document.body.classList.add('fixed-nav-open');
-          var fixedNavBtnOpen = document.querySelector('.js-fixed-nav_btn.open');
-          var tab = this.getAttribute('data-tab');
-          var b = document.querySelector('.js-tabs_tab[data-tab=' + tab + ']');
-          var fixedNavBtnMenu = document.querySelector('.js-tabs_tab.open');
-          if ( fixedNavBtnOpen !== null) {
-              fixedNavBtnOpen.classList.remove('open');
-          }
-          if ( fixedNavBtnMenu !== null) {
-              fixedNavBtnMenu.classList.remove('open');
-          }
-          b.classList.add('open');
-          this.classList.add('open');
+  for (let item of fixedNavBtn) {
+    item.addEventListener('click', function (e) {
+      document.querySelector('.js-fixed-nav').classList.add('opened');
+      document.body.classList.add('fixed-nav-open');
+      const fixedNavBtnOpen = document.querySelector('.js-fixed-nav_btn.open');
+      const tab = document.querySelector(`.js-tabs_tab[data-tab=${this.dataset.tab}]`);
+      const fixedNavBtnMenu = document.querySelector('.js-tabs_tab.open');
+      if ( fixedNavBtnOpen !== null) {
+        fixedNavBtnOpen.classList.remove('open');
       }
-  }
-  for (var i = 0; i < overlayBack.length; i++) {
-      overlayBack[i].onclick = function () {
-          document.querySelector('.js-fixed-nav').classList.remove('opened');
-          document.body.classList.remove('fixed-nav-open');
-          document.querySelector('.js-fixed-nav_btn.open').classList.remove('open');
-          document.querySelector('.js-tabs_tab.open').classList.remove('open');
+      if ( fixedNavBtnMenu !== null) {
+        fixedNavBtnMenu.classList.remove('open');
       }
+      tab.classList.add('open');
+      this.classList.add('open');
+    });
   }
-  for (var i = 0; i < fixedNavClose.length; i++) {
-      fixedNavClose[i].onclick = function () {
-          document.querySelector('.js-fixed-nav').classList.remove('opened');
-          document.body.classList.remove('fixed-nav-open');
-          document.querySelector('.js-fixed-nav_btn.open').classList.remove('open');
-          document.querySelector('.js-tabs_tab.open').classList.remove('open');
-      }
-  }
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    if ( target !== overlayBack && target !== fixedNavClose ) return;
+    document.querySelector('.js-fixed-nav').classList.remove('opened');
+    document.body.classList.remove('fixed-nav-open');
+    document.querySelector('.js-fixed-nav_btn.open').classList.remove('open');
+    document.querySelector('.js-tabs_tab.open').classList.remove('open');
+  });
 
   //Sticky header
   function stickyHeader() {
@@ -1035,18 +1018,15 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   };
 
-  var dropdownButton = document.getElementsByClassName('dropdown_button');
 
-  for (var i = 0; i < dropdownButton.length; i++) {
-      dropdownButton[i].onclick = function () {
-          var dropdownBlock = document.getElementsByClassName('dropdown_content');
-          for (var i = 0; i < dropdownBlock.length; i++) {
-              var openDropdown = dropdownBlock[i];
-              openDropdown.classList.toggle('show');
-          }
-      }
-  }
-
+  window.addEventListener('click', function (e) {
+    const dropdownButton = document.querySelector('.dropdown_button');
+    if (e.target !== dropdownButton) return;
+    const dropdownBlock = document.getElementsByClassName('dropdown_content');
+    for (let openDropdown of dropdownBlock) {
+      openDropdown.classList.toggle('show');
+    }
+  });
 
   window.addEventListener('click', function (e) {
     if (!e.target.matches('.dropdown_button')) {
