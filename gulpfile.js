@@ -1,19 +1,20 @@
-var gulp         = require('gulp'),
-		sass         = require('gulp-sass'),
-		browserSync  = require('browser-sync'),
-		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglify-es').default,
-		cleancss     = require('gulp-clean-css'),
-		autoprefixer = require('gulp-autoprefixer'),
-		rsync        = require('gulp-rsync'),
-		newer        = require('gulp-newer'),
-		rename       = require('gulp-rename'),
-		responsive   = require('gulp-responsive'),
-		del          = require('del'),
-		svgSprite    = require('gulp-svg-sprite'),
-		svgmin       = require('gulp-svgmin'),
-		cheerio      = require('gulp-cheerio'),
-		replace      = require('gulp-replace');
+const gulp         = require('gulp'),
+			sass         = require('gulp-sass'),
+			browserSync  = require('browser-sync'),
+			concat       = require('gulp-concat'),
+			uglify       = require('gulp-uglify-es').default,
+			cleancss     = require('gulp-clean-css'),
+			autoprefixer = require('gulp-autoprefixer'),
+			rsync        = require('gulp-rsync'),
+			newer        = require('gulp-newer'),
+			rename       = require('gulp-rename'),
+			responsive   = require('gulp-responsive'),
+			del          = require('del'),
+			svgSprite    = require('gulp-svg-sprite'),
+			svgmin       = require('gulp-svgmin'),
+			cheerio      = require('gulp-cheerio'),
+			replace      = require('gulp-replace'),
+			sourcemaps   = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
 
@@ -54,8 +55,10 @@ gulp.task('scripts', function() {
 		'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js' // Custom scripts. Always at the end
 		])
+	.pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Minify js (opt.)
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

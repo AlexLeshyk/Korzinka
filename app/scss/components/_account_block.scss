@@ -1,0 +1,135 @@
+/*logo block*/
+.header .logo {
+  background: url('../img/logo_header.png') no-repeat center center;
+  height: 51px;
+  width: 147px;
+  display: block;
+  margin: 15px auto;
+  text-indent: -999px;
+  @include breakpoint($media-lg-xl) {
+    margin: 0;
+  }
+}
+/* account block */
+.account-table {
+  @include breakpoint($media-lg-xl) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.account {
+  font-size: 0;
+  text-align: center;
+  @include breakpoint($media-lg-xl) {
+    text-align: right;
+  }
+  input[type="search"] {
+    width: 280px;
+    height: 35px;
+    padding: 5px 40px 5px 15px;
+    font-size: 14px;
+    color: #898989;
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+
+    &:focus {
+      width: 280px;
+      @include breakpoint($media-xxl) {
+        width: 400px;
+      }
+    }
+  }
+  .account-search {
+    margin: 20px 20px 18px 0;
+  }
+  .account-favorite {
+    margin: 20px 0 18px 35px;
+  }
+  .account-list {
+    padding-left: 40px;
+    margin: 20px 5px 18px 25px;
+    @include breakpoint($media-md-xl) {
+      padding-left: 30px;
+    }
+    @include breakpoint($media-lg-xl) {
+      margin: 20px 20px 18px 25px;
+    }
+  }
+  .account-search, .account-favorite, .account-list {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.account-circle-link {
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 42px;
+  height: 42px;
+  background: $accent;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.account-green .account-circle-link {
+  background: #03ac4c;
+}
+.account-favorite {
+  .account-circle-link {
+    top: -3px;
+    transform: none;
+  }
+  span {
+    @include font-type(10px, 18px, #222222);
+    position: absolute;
+    top: -4px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    letter-spacing: -0.4px;
+    background: #ffffff;
+    border: 2px solid $accent;
+    border-radius: 12px;
+  }
+}
+.account-list {
+  .account-circle-link {
+    right: auto;
+    left: -3px;
+  }
+  .account-link {
+    display: block;
+    margin: 0 15px;
+    font-family: $opensans-extrabold;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    color: #404040;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  span, .log-out {
+    display: block;
+    margin-left: 15px;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    color: #898989;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  em {
+    font-style: normal;
+    text-transform: none;
+  }
+  .log-out:hover {
+    text-decoration: underline;
+    color: #404040;
+  }
+}

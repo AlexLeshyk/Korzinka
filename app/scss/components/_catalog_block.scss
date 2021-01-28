@@ -83,14 +83,16 @@
     border-bottom: 3px solid #363636;
   }
   figure {
-    margin: 0;
-    position: relative;
     flex-grow: 1;
+    position: relative;
+    margin: 0;
     .block {
       position: relative;
       display: block;
       &:hover {
-        img { opacity: 0.5;}
+        img {
+          opacity: 0.5;
+        }
         .middle-block {
           opacity: 1;
         }
@@ -124,9 +126,16 @@
       height: 26px;
       transform: rotate(135deg) translateY(-50%);
     }
-    &.new::after, &.discount::after { content: '';}
-    &.new::after { background: #03ac4c;}
-    &.discount:after { background: #1abfd2;}
+    &.new::after,
+    &.discount::after {
+      content: '';
+    }
+    &.new::after {
+      background: #03ac4c;
+    }
+    &.discount::after {
+      background: #1abfd2;
+    }
     .middle-block {
       position: absolute;
       top: 50%;
@@ -202,8 +211,12 @@
     }
   }
   @media (max-width: 521px) {
-    .btn {margin: 0 0 10px 0;}
-    .rating-block {padding: 0 8px;}
+    .btn {
+      margin: 0 0 10px;
+    }
+    .rating-block {
+      padding: 0 8px;
+    }
   }
 }
 .items-flex {
@@ -228,8 +241,12 @@
     display: inline-block;
     margin: 4px 2px;
     vertical-align: top;
-    &.next {margin-left: 16px;}
-    &.prev {margin-right: 16px;}
+    &.next {
+      margin-left: 16px;
+    }
+    &.prev {
+      margin-right: 16px;
+    }
     &.active a {
       border: 1px solid #e6e6e6;
       background: #f9f9f9;
@@ -264,7 +281,9 @@
     padding: 27px 6px 26px;
     margin-bottom: 0;
   }
-  &.active { display: block;}
+  &.active {
+    display: block;
+  }
 }
 .catalog-items-block {
   flex-wrap: wrap;
@@ -299,14 +318,14 @@
     }
   }
   @include breakpoint($media-md-xl) {
-    margin: 15px 25px 15px 35px;
     flex: auto;
+    margin: 15px 25px 15px 35px;
 
     label {
       display: inline-block;
       margin: 0 10px;
-      vertical-align: middle;
       font-size: 14px;
+      vertical-align: middle;
     }
     .jq-selectbox {
       width: auto;
@@ -336,4 +355,215 @@
     }
   }
   a + a { margin-left: 8px; }
+}
+/*catalog page - list*/
+.catalog_list {
+  padding: 20px 5px;
+  margin: 0 -5px;
+  @include breakpoint($media-sm) {
+    padding: 27px 15px 7px;
+  }
+  &.catalog_block {
+    margin: 0 0 15px;
+    @include breakpoint($media-sm) {
+      margin: 0 0 10px;
+    }
+  }
+  .catalog_item {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    padding-bottom: 0;
+    margin: 0;
+    .rating {
+      padding: 0 0 0 5px;
+      @include breakpoint($media-sm) {
+        padding: 0;
+      }
+    }
+  }
+  figure {
+    display: flex;
+    width: 150px;
+    background-color: #fff;
+    border-right: 3px solid #363636;
+    @include breakpoint($media-sm) {
+      width: 205px;
+    }
+    .yellow-price {
+      top: auto;
+      bottom: 20px;
+      transform: none;
+    }
+  }
+  img {
+    border-bottom: none;
+  }
+  .rating {
+    line-height: 20px;
+  }
+  .form-group {
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    @include breakpoint($media-lg-xl) {
+      width: 50%;
+    }
+    @include breakpoint($media-xs-lg) {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .stars {
+    margin: 0 5px 10px;
+    @include breakpoint($media-sm) {
+      margin: 0 10px 10px;
+    }
+    @include breakpoint($media-xxl) {
+      margin: 0 0 10px 15px;
+    }
+  }
+  .comment {
+    padding: 0;
+    margin: 0 5px 8px;
+    @include breakpoint($media-sm) {
+      padding-left: 10px;
+      margin: 0 0 8px;
+    }
+    @include breakpoint($media-xxl) {
+      margin: 0 0 8px 15px;
+    }
+  }
+  @media (max-width: 521px) {
+    .catalog_item {
+      figure {
+        display: none;
+      }
+      .stripe {
+        top: 0;
+        left: 0;
+        padding: 2px 10px;
+        background: #03ac4c;
+        transform: none;
+        &.stripe-discount {
+          font-size: 12px;
+          background: #1abfd2;
+        }
+      }
+    }
+  }
+}
+.catalog_description {
+  position: relative;
+  width: calc(100% - 150px);
+  padding: 10px 5px 5px;
+  @include breakpoint($media-sm) {
+    padding: 10px 5px 5px 7px;
+  }
+  @include breakpoint($media-xxl) {
+    padding: 10px 5px 5px 10px;
+  }
+  p {
+    padding: 0;
+    margin: 0 0 10px;
+    text-align: center;
+    @include breakpoint($media-sm) {
+      padding-left: 10px;
+      margin: 0 0 10px;
+      text-align: left;
+    }
+    @include breakpoint($media-xxl) {
+      padding-left: 15px;
+    }
+    a {
+      @include font-type(14px, 18px, #363636);
+      font-family: $opensans-semibold;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include breakpoint($media-xxl) {
+        font-size: 16px;
+      }
+    }
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    @include breakpoint($media-sm) {
+      width: auto;
+      margin: 10px 2px 0;
+    }
+    @include breakpoint($media-xxl) {
+      display: inline-block;
+    }
+  }
+  i {
+    @include font-type(13px, 21px, #383838);
+    display: block;
+    padding-left: 5px;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    @include breakpoint($media-sm) {
+      padding-left: 10px;
+    }
+    @include breakpoint($media-xxl) {
+      padding: 0 0 0 15px;
+    }
+    span {
+      color: #999999;
+    }
+  }
+  .price {
+    @include font-type(16px, 24px, #383838);
+    display: inline-block;
+    width: calc(100% - 120px);
+    padding-left: 5px;
+
+    @include breakpoint($media-sm) {
+      padding-left: 7px;
+      margin: 0;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include breakpoint($media-xxl) {
+      padding-left: 15px;
+      margin: 10px 0 0;
+    }
+    span {
+      margin: 0 7px;
+      font-family: $opensans-bold;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 28px;
+
+      @include breakpoint($media-sm) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+  .list {
+    flex: 70%;
+  }
+  .button-block {
+    flex: 100%;
+  }
+  .catalog_bottom {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @media (max-width: 521px) {
+    width: 100%;
+    .price {
+      width: auto;
+      text-align: left;
+    }
+    i {
+      text-align: left;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
 }

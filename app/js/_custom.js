@@ -185,24 +185,21 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 
-  $(document).on('click','.js-videoPoster',function(e) {
-    //отменяем стандартное действие button
+  // click to video poster
+  document.addEventListener('click', function (e) {
+    let target = e.target;
+    if ( !target.classList.contains('js-videoPoster') ) return;
     e.preventDefault();
-    var poster = $(this);
-    // ищем родителя ближайшего по классу
-    var wrapper = poster.closest('.js-videoWrapper');
+    const wrapper = target.closest('.js-videoWrapper');
     videoPlay(wrapper);
   });
 
-  //вопроизводим видео, при этом скрывая постер
+  // replay video, hide poster
   function videoPlay(wrapper) {
-    var iframe = wrapper.find('.js-videoIframe');
-    // Берем ссылку видео из data
-    var src = iframe.data('src');
-    // скрываем постер
-    wrapper.addClass('videoWrapperActive');
-    // подставляем в src параметр из data
-    iframe.attr('src',src);
+    const iframe = wrapper.querySelector('.js-videoIframe');
+    const src = iframe.dataset.src;
+    wrapper.classList.add('videoWrapperActive');
+    iframe.setAttribute('src',src);
   }
 
   // smooth scroll
@@ -939,26 +936,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //Sticky header
   function stickyHeader() {
-      // Get the header
-      var header = document.getElementsByClassName("bg-grey");
-      // Get the offset position of the header
+    // Get the header
+    const header = document.getElementsByClassName('bg-grey');
+    // Get the offset position of the header
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+    for (let item of header) {
       if (header[0] !== undefined) {
-          var sticky = header[0].offsetTop;
+        const sticky = header[0].offsetTop;
+        if (scrollTop > sticky && window.innerWidth >= 992) {
+          item.classList.add('sticky');
+          item.parentElement.classList.add('sticky');
+        } else {
+          item.classList.remove('sticky');
+          item.parentElement.classList.remove('sticky');
+        }
       }
-
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      for (var i = 0; i < header.length; i++) {
-          if (scrollTop > sticky && window.innerWidth >= 992) {
-              header[i].classList.add('sticky');
-              header[i].parentElement.classList.add('sticky');
-          } else {
-              header[i].classList.remove('sticky');
-              header[i].parentElement.classList.remove('sticky');
-          }
-      }
+    }
   };
-  window.addEventListener("scroll", stickyHeader);
+  window.addEventListener('scroll', stickyHeader);
 
   window.onscroll = function () {
       var buttonUp = document.getElementsByClassName("js-up");
