@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
 		'node_modules/jquery-ui-dist/jquery-ui.min.js',
 		'app/js/_jquery.formstyler.min.js',
 		'app/js/_owl.carousel.min.js',
-		'app/js/_lazy.js', // JS library plug-in example
+		// 'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js' // Custom scripts. Always at the end
 		])
 	.pipe(sourcemaps.init())

@@ -231,22 +231,22 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   // Main menu navigation
-  var nav_link = document.querySelectorAll('.top-menu_link');
-  for (var i = 0; i < nav_link.length; i++) {
-      nav_link[i].onclick = function () {
-          if (this.parentElement.classList.contains('active')) {
-              return false;
-          }
+  const nav_link = document.querySelectorAll('.top-menu_link');
+  for (let item of nav_link) {
+    item.onclick = function () {
+      if (this.parentElement.classList.contains('active')) {
+        return false;
+      }
 
-          var el = nav_link[0].parentElement;
-          while (el) {
-              if (el.tagName === "LI") {
-                  el.classList.remove('active');
-              }
-              el = el.nextElementSibling;
-          }
-          this.parentElement.classList.add('active');
-      };
+      let el = nav_link[0].parentElement;
+      while (el) {
+        if (el.tagName === 'LI') {
+          el.classList.remove('active');
+        }
+        el = el.nextElementSibling;
+      }
+      this.parentElement.classList.add('active');
+    };
   }
 
   // Switch tabs home page
@@ -500,103 +500,98 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Quantity of products input
-  var productQuantity = document.querySelector("input[name='prodQuantity']");
+  const productQuantity = document.querySelector("input[name='prodQuantity']");
 
   if (productQuantity !== null) {
-      var maxQuantity = parseInt(productQuantity.getAttribute('maxQ'));
-      var minQuantity = parseInt(productQuantity.getAttribute('minQ'));
-      var plusButton = document.querySelector('.js-amount-up');
-      var minusButton = document.querySelector('.js-amount-down');
-      plusButton.onclick = function () {
-          var b = parseInt(productQuantity.value, 10);
-          if (b >= maxQuantity) {
-              this.setAttribute('disabled', 'disabled');
-          } else {
-              this.nextElementSibling.removeAttribute('disabled');
-              b++;
-              productQuantity.value = b;
-          }
-      };
-      minusButton.onclick = function () {
-          var b = parseInt(productQuantity.value, 10);
-          if (b <= minQuantity) {
-              this.setAttribute('disabled', 'disabled');
-          } else {
-              this.previousElementSibling.removeAttribute('disabled');
-              b--;
-              productQuantity.value = b;
-          }
-      };
+    const maxQuantity = parseInt(productQuantity.getAttribute('maxQ'));
+    const minQuantity = parseInt(productQuantity.getAttribute('minQ'));
+    const plusButton = document.querySelector('.js-amount-up');
+    const minusButton = document.querySelector('.js-amount-down');
+    plusButton.onclick = function () {
+      let b = parseInt(productQuantity.value, 10);
+      if (b >= maxQuantity) {
+        this.setAttribute('disabled', 'disabled');
+      } else {
+        this.nextElementSibling.removeAttribute('disabled');
+        b++;
+        productQuantity.value = b;
+      }
+    };
+    minusButton.onclick = function () {
+      let b = parseInt(productQuantity.value, 10);
+      if (b <= minQuantity) {
+        this.setAttribute('disabled', 'disabled');
+      } else {
+        this.previousElementSibling.removeAttribute('disabled');
+        b--;
+        productQuantity.value = b;
+      }
+    };
   }
 
   // hidden block
-  var checkBox = document.querySelectorAll('.price-block_inner input[type="checkbox"]');
-  var checkBoxHiddenBlock = document.querySelectorAll('.parametrs-block-hidden');
-  var button_more = document.querySelectorAll('.js-more');
+  const checkBox = document.querySelector('.price-block_inner input[type="checkbox"]');
+  const checkBoxHiddenBlock = document.querySelector('.parametrs-block-hidden');
+  const buttonMore = document.querySelector('.js-more');
 
-  for (var i = 0; i < checkBox.length; i++) {
-      checkBox[i].onchange = function () {
-          if (this.checked) {
-              checkBoxHiddenBlock[0].classList.add('open');
-              button_more[0].classList.add('open');
-              checkBoxHiddenBlock[0].style.height = checkBoxHiddenBlock[0].scrollHeight + "px";
-              this.parentElement.childNodes[3].replaceWith("Отключить все");
-              return;
-          } else {
-              checkBoxHiddenBlock[0].classList.remove('open');
-              button_more[0].classList.remove('open');
-              checkBoxHiddenBlock[0].style.height = null;
-              this.parentElement.childNodes[3].replaceWith("Включить все");
-          }
-      };
-  }
+  try {
+    checkBox.addEventListener('change', function() {
+      if (this.checked) {
+        checkBoxHiddenBlock.classList.add('open');
+        buttonMore.classList.add('open');
+        checkBoxHiddenBlock.style.height = `${checkBoxHiddenBlock.scrollHeight}px`;
+        this.parentElement.childNodes[3].replaceWith('Отключить все');
+        return;
+      } else {
+        checkBoxHiddenBlock.classList.remove('open');
+        buttonMore.classList.remove('open');
+        checkBoxHiddenBlock.style.height = null;
+        this.parentElement.childNodes[3].replaceWith('Включить все');
+      }
+    });
+  } catch(e) {}
 
-  for (var i = 0; i < button_more.length; i++) {
-      button_more[i].onclick = function () {
-          var hiddenBlock = this.parentElement.previousElementSibling;
-          if (this.classList.contains('open')) {
-              this.classList.remove('open');
-              hiddenBlock.classList.remove('open');
-              hiddenBlock.style.height = null;
-              for (var i = 0; i < checkBox.length; i++) {
-                  checkBox[i].checked = false;
-                  checkBox[i].parentElement.childNodes[3].replaceWith("Включить все");
-              }
-          } else {
-              this.classList.add('open');
-              hiddenBlock.classList.add('open');
-              hiddenBlock.style.height = hiddenBlock.scrollHeight + "px";
-              for (var i = 0; i < checkBox.length; i++) {
-                  checkBox[i].checked = true;
-                  checkBox[i].parentElement.childNodes[3].replaceWith("Отключить все");
-              }
-          }
-          return false;
-      };
-  }
+  try {
+    buttonMore.addEventListener('click', function(e) {
+      e.preventDefault();
+      const hiddenBlock = this.parentElement.previousElementSibling;
+      if (this.classList.contains('open')) {
+        this.classList.remove('open');
+        hiddenBlock.classList.remove('open');
+        hiddenBlock.style.height = null;
+        checkBox.checked = false;
+        checkBox.parentElement.childNodes[3].replaceWith('Включить все');
+      } else {
+        this.classList.add('open');
+        hiddenBlock.classList.add('open');
+        hiddenBlock.style.height = `${hiddenBlock.scrollHeight}px`;
+        checkBox.checked = true;
+        checkBox.parentElement.childNodes[3].replaceWith('Отключить все');
+      }
+    });
+  } catch(e) {}
 
   // reset checkboxes
-  var parametrsCheckbox = document.querySelectorAll('.parametrs-block-left input[type="checkbox"]');
-  var parametrsRadio = document.querySelectorAll('.parametrs-block-left input[type="radio"]');
-  for (var i = 0; i < parametrsCheckbox.length; i++) {
-    parametrsCheckbox[i].checked = false;
+  const parametrsCheckbox = document.querySelectorAll('.parametrs-block-left input[type="checkbox"]');
+  const parametrsRadio = document.querySelectorAll('.parametrs-block-left input[type="radio"]');
+  for (let item of parametrsCheckbox) {
+    item.checked = false;
   }
-  for (var i = 0; i < parametrsRadio.length; i++) {
-    parametrsRadio[i].checked = false;
+  for (let item of parametrsRadio) {
+    item.checked = false;
   }
-
 
   // window resizing on hidden block
   window.addEventListener("resize", function (e) {
-    for (var i = 0; i < checkBoxHiddenBlock.length; i++) {
-        if ( (window.innerWidth < 1200) && (checkBoxHiddenBlock[i].classList.contains('open')) ) {
-            checkBoxHiddenBlock[i].style.height = "auto";
-        } else if ( (window.innerWidth > 1200) && (checkBoxHiddenBlock[i].classList.contains('open')) ) {
-            checkBoxHiddenBlock[i].style.height = checkBoxHiddenBlock[i].scrollHeight + "px";
-        } else {
-            checkBoxHiddenBlock[i].style.height = null;
-        }
-    }
+    try {
+      if ( (window.innerWidth < 1200) && (checkBoxHiddenBlock.classList.contains('open')) ) {
+        checkBoxHiddenBlock.style.height = 'auto';
+      } else if ( (window.innerWidth > 1200) && (checkBoxHiddenBlock.classList.contains('open')) ) {
+        checkBoxHiddenBlock.style.height = checkBoxHiddenBlock.scrollHeight + 'px';
+      } else {
+        checkBoxHiddenBlock.style.height = null;
+      }
+    } catch(e) {}
   });
 
   /* Popup review */
@@ -677,19 +672,19 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Items click to like icon
-  var likeIcons = document.querySelectorAll('.like');
-  for (var i = 0; i < likeIcons.length; i++) {
-      likeIcons[i].onclick = function (e) {
-          e.preventDefault();
-          if (this.classList.contains('like-checked')) {
-              this.classList.remove('like-checked');
-              this.classList.remove('icon-like-checked');
-              this.classList.add('icon-like');
-          } else {
-              this.classList.add('like-checked');
-              this.classList.add('icon-like-checked');
-          }
-      };
+  const likeIcons = document.querySelectorAll('.like');
+  for (let item of likeIcons) {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (this.classList.contains('like-checked')) {
+        this.classList.remove('like-checked');
+        this.classList.remove('icon-like-checked');
+        this.classList.add('icon-like');
+      } else {
+        this.classList.add('like-checked');
+        this.classList.add('icon-like-checked');
+      }
+    });
   }
 
   // Click to Image
@@ -767,44 +762,43 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  var field = document.querySelectorAll('#field-for-circle');
-  var ball = document.getElementById('circle');
+  const field = document.getElementById('field-for-circle');
+  const ball = document.getElementById('circle');
 
-  for (var i = 0; i < field.length; i++) {
-      field[i].onclick = function (e) {
-          // координаты поля относительно окна
-          var fieldCoords = this.getBoundingClientRect();
+  try {
+    field.addEventListener('click', function(e) {
+      // координаты поля относительно окна
+      const fieldCoords = this.getBoundingClientRect();
+      // координаты левого-верхнего внутреннего угла поля
+      const fInCoordTop = fieldCoords.top + this.clientTop;
+      const fInCoordLeft = fieldCoords.left + this.clientLeft;
 
-          // координаты левого-верхнего внутреннего угла поля
-          var fInCoordTop = fieldCoords.top + this.clientTop;
-          var fInCoordLeft = fieldCoords.left + this.clientLeft;
+      ballCoordTop = e.clientY - fInCoordTop - ball.clientHeight / 2;
+      ballCoordLeft = e.clientX - fInCoordLeft - ball.clientWidth / 2;
 
-          ballCoordTop = e.clientY - fInCoordTop - ball.clientHeight / 2;
-          ballCoordLeft = e.clientX - fInCoordLeft - ball.clientWidth / 2;
+      if (ballCoordTop < 0) {
+        ballCoordTop = 0;
+      }
 
-          if (ballCoordTop < 0) {
-              ballCoordTop = 0;
-          }
+      if (ballCoordLeft < 0) {
+        ballCoordLeft = 0;
+      }
 
-          if (ballCoordLeft < 0) {
-              ballCoordLeft = 0;
-          }
+      if (ballCoordLeft + ball.clientWidth > this.clientWidth) {
+        ballCoordLeft = this.clientWidth - ball.clientWidth;
+      }
 
-          if (ballCoordLeft + ball.clientWidth > this.clientWidth) {
-              ballCoordLeft = this.clientWidth - ball.clientWidth;
-          }
+      if (ballCoordTop + ball.clientHeight > this.clientHeight) {
+        ballCoordTop = this.clientHeight - ball.clientHeight;
+      }
 
-          if (ballCoordTop + ball.clientHeight > this.clientHeight) {
-              ballCoordTop = this.clientHeight - ball.clientHeight;
-          }
-
-          ball.style.left = ballCoordLeft + 'px';
-          ball.style.top = ballCoordTop + 'px';
-      };
-  }
+      ball.style.left = ballCoordLeft + 'px';
+      ball.style.top = ballCoordTop + 'px';
+    });
+  } catch(e) {}
 
   const thumbs = document.querySelector('.thumbs');
-  if (thumbs !== null) {
+  try {
     thumbs.addEventListener('click',(e) => {
       e.preventDefault();
       let target = event.target.closest('a');
@@ -813,7 +807,7 @@ document.addEventListener("DOMContentLoaded", function() {
       largeImg.src = target.href;
       largeImg.alt = target.title;
     });
-  }
+  } catch(e) {}
 
   //Forms
   var formParam = document.forms.form_params;
@@ -886,21 +880,21 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // sub menu links on hover
-  for (var i = 0; i < sub_menu.length; i++) {
-      sub_menu[i].onmouseover = function (e) {
-          var target = e.target;
-          if (target.tagName == 'A') {
-              target.setAttribute('title', target.innerHTML);
-              target.classList.add('hovered');
-          }
-      };
-      sub_menu[i].onmouseout = function (e) {
-          var target = e.target;
-          if (target.tagName == 'A') {
-              target.removeAttribute('title', target.innerHTML);
-              target.classList.remove('hovered');
-          }
-      };
+  for (let item of sub_menu) {
+    item.onmouseover = function (e) {
+      const target = e.target;
+      if (target.tagName === 'A') {
+        target.setAttribute('title', target.innerHTML);
+        target.classList.add('hovered');
+      }
+    };
+    item.onmouseout = function (e) {
+      const target = e.target;
+      if (target.tagName === 'A') {
+        target.removeAttribute('title', target.innerHTML);
+        target.classList.remove('hovered');
+      }
+    };
   }
 
   // fixed navigation menu
@@ -957,29 +951,27 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', stickyHeader);
 
   window.onscroll = function () {
-      var buttonUp = document.getElementsByClassName("js-up");
-      for (var i = 0; i < buttonUp.length; i++) {
-          if (window.pageYOffset > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
-              buttonUp[i].classList.add('up');
-          } else {
-              buttonUp[i].classList.remove('up');
-          }
-          buttonUp[i].onclick = function () {
-              window.pageYOffset = 0;
-              document.documentElement.scrollTop = 0;
-          };
+    const buttonUp = document.getElementsByClassName('js-up');
+    for (let item of buttonUp) {
+      if (window.pageYOffset > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+        item.classList.add('up');
+      } else {
+        item.classList.remove('up');
       }
+      item.onclick = function () {
+        window.pageYOffset = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    }
   };
-
-  window.onload = function () {
-      var preLoader = document.getElementsByClassName('preloader');
+  window.addEventListener('load', function () {
+    const preLoader = document.querySelector('.preloader');
+    if (preLoader !== null) {
       sleep(0).then(function() {
-        for (var i = 0; i < preLoader.length; i++) {
-            preLoader[i].style.display =  'none';
-        }
+        preLoader.style.display =  'none';
       });
-  };
-
+    }
+  });
 
   window.addEventListener('click', function (e) {
     const dropdownButton = document.querySelector('.dropdown_button');
@@ -1111,19 +1103,19 @@ let url = 'http://jsonplaceholder.typicode.com/todos';
 async function fetchAsyncTodos() {
   console.log('Fetch todo started');
   await delay(600);
-  var response = await fetch(url);
-  var data = await response.json();
+  const response = await fetch(url);
+  const data = await response.json();
 
-  var dataObjectInner = document.querySelectorAll(".timeline-item p");
-  for (var j = 0; j < dataObjectInner.length; j++) {
-    dataObjectInner[j].innerHTML = '';
-    var dataContent = data[j].title;
-    var dataContentSpan = '<span>' + data[j].completed + '</span>';
-    if (dataObjectInner[j] !== null) {
-      dataObjectInner[j].insertAdjacentHTML("afterbegin", dataContent);
-      dataObjectInner[j].insertAdjacentHTML("afterend", dataContentSpan);
+  const dataObjectInner = document.querySelectorAll('.timeline-item p');
+  dataObjectInner.forEach((item, j) => {
+    item.innerHTML = '';
+    const dataContent = data[j].title;
+    const dataContentSpan = `<span>${data[j].completed}</span>`;
+    if (item !== null) {
+      item.insertAdjacentHTML("afterbegin", dataContent);
+      item.insertAdjacentHTML("afterend", dataContentSpan);
     }
-  }
+  });
 
   console.log('DATA:', data );
 }

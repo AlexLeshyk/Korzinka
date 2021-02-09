@@ -1,11 +1,31 @@
 @import "_mixins/font-face";
 
+@font-face {
+  font-weight: normal;
+  font-family: lato-black;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Lato-Black/Lato-Black.woff') format('woff'),
+    url('../fonts/Lato-Black/Lato-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: lato-bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Lato-Bold/Lato-Bold.woff') format('woff'),
+    url('../fonts/Lato-Bold/Lato-Bold.woff2') format('woff2');
+}
+
 @include font-face("roboto", "../fonts/RobotoRegular/RobotoRegular");
 @include font-face("roboto-bold", "../fonts/RobotoBold/RobotoBold", bold);
 
 
-@include font-face("lato-black", "../fonts/Lato-Black/Lato-Black");
-@include font-face("lato-bold", "../fonts/Lato-Bold/Lato-Bold");
+// @include font-face("lato-black", "../fonts/Lato-Black/Lato-Black");
+// @include font-face("lato-bold", "../fonts/Lato-Bold/Lato-Bold");
 
 
 @include font-face("opensans", "../fonts/OpenSans-Regular/OpenSans-Regular");
